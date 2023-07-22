@@ -42,7 +42,17 @@ public struct Plot2D_UI: View {
     let lim_max: CGFloat = 100000
     
     func constrain_lim(_ new_lim: CGFloat) -> CGFloat{
-        return max(min(new_lim.magnitude, lim_max), min(x_lim_step, y_lim_step))
+        let lim_min = min(x_lim_step, y_lim_step)
+        var new_lim = new_lim
+        
+        if new_lim < lim_min{
+            new_lim = lim_min
+        }
+        if new_lim > lim_max{
+            new_lim = lim_max
+        }
+        
+        return new_lim
     }
     
     @State public var x_lim_step: CGFloat
@@ -85,9 +95,13 @@ public struct Plot2D_UI: View {
         self.y_lim_add(step: y_lim_step)
     }
     
-    @State private var crown_offset: CGFloat = 0
+    @State private var crown_selected: Float = 0
     
-    @State private var crown_last_offset: CGFloat = 0
+    @State private var crown_last_selected: Float = 0
+    
+    @State private var crown_timer: Timer? = nil
+    
+    @State private var crown_focus: Bool = true
     
     public var body: some View {
         GeometryReader { geometry in
@@ -205,14 +219,29 @@ public struct Plot2D_UI: View {
             }
 #endif
 #if os(watchOS)
-            .focusable(true) // To receive focus for crown events.
-            .digitalCrownRotation(detent: $crown_offset, from: -1, through: 1, by: 1) { offsetChange in
-                if crown_offset != crown_last_offset{
-                    scale_lim(speed: crown_offset)
-                    
-                    crown_last_offset = crown_offset
+            .focusable(self.crown_focus) // To receive focus for crown events.
+            .digitalCrownRotation(detent: $crown_selected, from: -5.0, through: 5.0, by: 1.0, sensitivity: .low) { crownEvent in
+//                print("crown_selected = \(crown_selected)")
+//                print("offset = \(crownEvent.offset)")
+                self.crown_timer = .scheduledTimer(withTimeInterval: 1, repeats: false){_ in
+                    self.crown_focus = false
+                    DispatchQueue.main.async {
+                        self.crown_focus = true
+                    }
                 }
-                crown_offset = 0
+                
+                let crow_direction: CGFloat = crown_last_selected > crown_selected ? 1 : -1
+
+                if crown_selected != crown_last_selected{
+                    if crown_selected != 0{
+                        scale_lim(speed: crow_direction)
+                    }
+                    
+                    crown_last_selected = crown_selected
+                }
+            } onIdle: {
+                self.crown_selected = 0
+                self.crown_timer?.invalidate()
             }
 #endif
         }
