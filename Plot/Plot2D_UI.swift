@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+#if os(macOS)
+import AppKit
+#endif
 
 public struct Plot2D_UI: View {
     
@@ -48,17 +51,43 @@ public struct Plot2D_UI: View {
     
     @State public var x_lim: CGFloat
     
+    private func x_lim_add(step: CGFloat){
+        self.x_lim = constrain_lim(self.x_lim + step)
+    }
+    
     @State public var y_lim_step: CGFloat
     
     public let y_lim_default: CGFloat
     
     @State public var y_lim: CGFloat
     
+    private func y_lim_add(step: CGFloat){
+        self.y_lim = constrain_lim(self.y_lim + step)
+    }
+    
     @State private var canvas_isDragging = false
     
     @State private var canvasOffset_last = CGSize.zero
     
     @State private var canvasOffset = CGSize.zero
+    
+    @State private var scale: CGFloat = 1.0
+    
+    @State private var lastScale: CGFloat = 1.0
+    
+    @State private var scale_cumulative: CGFloat = 0.0
+    
+    func scale_lim(speed: CGFloat){
+        let x_lim_step = speed * self.x_lim_step
+        let y_lim_step = speed * self.y_lim_step
+        
+        self.x_lim_add(step: x_lim_step)
+        self.y_lim_add(step: y_lim_step)
+    }
+    
+    @State private var crown_offset: CGFloat = 0
+    
+    @State private var crown_last_offset: CGFloat = 0
     
     public var body: some View {
         GeometryReader { geometry in
@@ -77,17 +106,18 @@ public struct Plot2D_UI: View {
                 }
                 .offset(canvasOffset)
                 
-                
                 HStack{
                     Spacer()
+#if os(macOS)
                     Button("-", action: {
                         DispatchQueue.main.async {
-                            self.x_lim = constrain_lim(self.x_lim + self.x_lim_step)
-                            self.y_lim = constrain_lim(self.y_lim + self.y_lim_step)
+                            x_lim_add(step: self.x_lim_step)
+                            y_lim_add(step: self.y_lim_step)
                         }
                     })
                     Spacer()
-                    Button("R", action: {
+#endif
+                    Button("Reset", action: {
                         DispatchQueue.main.async {
                             withAnimation{
                                 self.x_lim = x_lim_default
@@ -97,20 +127,22 @@ public struct Plot2D_UI: View {
                             }
                         }
                     })
+#if os(macOS)
                     Spacer()
                     Button("+", action:{
                         DispatchQueue.main.async {
-                            self.x_lim = constrain_lim(self.x_lim - self.x_lim_step)
-                            self.y_lim = constrain_lim(self.y_lim - self.y_lim_step)
+                            x_lim_add(step: -self.x_lim_step)
+                            y_lim_add(step: -self.y_lim_step)
                         }
                     })
+#endif
                     Spacer()
                 }
-                #if os(watchOS)
+#if os(watchOS)
                 .offset(.init(width: 0, height: 0))
-                #else
+#else
                 .offset(.init(width: 0, height: -15))
-                #endif
+#endif
             }
             .background(background_color)
             .animation(self.canvas_isDragging ? nil : .easeOut, value: self.canvasOffset)
@@ -134,6 +166,55 @@ public struct Plot2D_UI: View {
                     }
                 }
             )
+#if os(macOS) || os(iOS)
+            .simultaneousGesture(MagnificationGesture()
+                .onChanged { scaleValue in
+                    guard scaleValue != 0 else{
+                        return
+                    }
+                    
+                    let delta_continuous: CGFloat = scaleValue > lastScale ? scaleValue / lastScale : -lastScale / scaleValue
+                    let delta_discrete: CGFloat = CGFloat(Int(delta_continuous))
+                    print(delta_continuous)
+                    print(delta_discrete)
+                    
+                    if (delta_discrete - scale_cumulative).magnitude > 0{
+                        let speed: CGFloat = delta_discrete - scale_cumulative < 0 ? -1 : 1
+                        scale_lim(speed: speed)
+                        scale_cumulative = delta_discrete
+                    }
+                }
+                .onEnded { _ in
+                    lastScale = 1.0
+                    scale_cumulative = 0.0
+                })
+#endif
+#if os(macOS)
+            .onAppear {
+                NotificationCenter.default.addObserver(forName: NSApplication.willUpdateNotification, object: nil, queue: nil) { _ in
+                    if let event = NSApp.currentEvent {
+                        if event.type == .scrollWheel {
+                            let speed: CGFloat = event.scrollingDeltaY < 0 ? 1 : -1
+                            scale_lim(speed: speed)
+                        }
+                    }
+                }
+            }
+            .onDisappear {
+                NotificationCenter.default.removeObserver(self, name: NSApplication.willUpdateNotification, object: nil)
+            }
+#endif
+#if os(watchOS)
+            .focusable(true) // To receive focus for crown events.
+            .digitalCrownRotation(detent: $crown_offset, from: -1, through: 1, by: 1) { offsetChange in
+                if crown_offset != crown_last_offset{
+                    scale_lim(speed: crown_offset)
+                    
+                    crown_last_offset = crown_offset
+                }
+                crown_offset = 0
+            }
+#endif
         }
     }
     
