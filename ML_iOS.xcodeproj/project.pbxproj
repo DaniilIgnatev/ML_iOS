@@ -42,6 +42,8 @@
 		85B989422A67FB4C00EC1E8F /* ML_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B989412A67FB4C00EC1E8F /* ML_iOSUITests.swift */; };
 		85B989442A67FB4C00EC1E8F /* ML_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B989432A67FB4C00EC1E8F /* ML_iOSUITestsLaunchTests.swift */; };
 		85B989542A67FB7900EC1E8F /* Regression1_UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B989502A67FB7900EC1E8F /* Regression1_UI.swift */; };
+		85F8B2EB2A74219900717CB5 /* Paint_UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F8B2EA2A74219900717CB5 /* Paint_UI.swift */; };
+		85F8B2ED2A7422B300717CB5 /* Figures_Recogniser_UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F8B2EC2A7422B300717CB5 /* Figures_Recogniser_UI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -213,6 +215,8 @@
 		85B989512A67FB7900EC1E8F /* ML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ML.swift; sourceTree = "<group>"; };
 		85B989522A67FB7900EC1E8F /* LinAlg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinAlg.swift; sourceTree = "<group>"; };
 		85B989532A67FB7900EC1E8F /* Plot2D_UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plot2D_UI.swift; sourceTree = "<group>"; };
+		85F8B2EA2A74219900717CB5 /* Paint_UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paint_UI.swift; sourceTree = "<group>"; };
+		85F8B2EC2A7422B300717CB5 /* Figures_Recogniser_UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Figures_Recogniser_UI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,17 +299,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		85618B4D2A68029600A64549 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		85618B4E2A6802B200A64549 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				85B989502A67FB7900EC1E8F /* Regression1_UI.swift */,
+				85F8B2EC2A7422B300717CB5 /* Figures_Recogniser_UI.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -368,6 +366,7 @@
 		85618BB22A6818BF00A64549 /* Plot */ = {
 			isa = PBXGroup;
 			children = (
+				85F8B2EA2A74219900717CB5 /* Paint_UI.swift */,
 				85B989532A67FB7900EC1E8F /* Plot2D_UI.swift */,
 				85618B4F2A680C5500A64549 /* Geometry.swift */,
 				85618BB32A6818BF00A64549 /* Plot.h */,
@@ -432,7 +431,6 @@
 			children = (
 				85B989252A67FB4C00EC1E8F /* ML_iOSApp.swift */,
 				85618B4E2A6802B200A64549 /* View */,
-				85618B4D2A68029600A64549 /* Model */,
 				85B989292A67FB4C00EC1E8F /* Assets.xcassets */,
 				85B9892B2A67FB4C00EC1E8F /* ML_iOS.entitlements */,
 				85B9892C2A67FB4C00EC1E8F /* Preview Content */,
@@ -904,6 +902,7 @@
 			files = (
 				85618BCE2A6818F300A64549 /* Plot2D_UI.swift in Sources */,
 				85618BCF2A6818F600A64549 /* Geometry.swift in Sources */,
+				85F8B2EB2A74219900717CB5 /* Paint_UI.swift in Sources */,
 				85618BB52A6818BF00A64549 /* Plot.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -920,6 +919,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85F8B2ED2A7422B300717CB5 /* Figures_Recogniser_UI.swift in Sources */,
 				85B989542A67FB7900EC1E8F /* Regression1_UI.swift in Sources */,
 				85B989262A67FB4C00EC1E8F /* ML_iOSApp.swift in Sources */,
 			);
