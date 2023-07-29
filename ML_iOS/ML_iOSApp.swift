@@ -12,19 +12,19 @@ struct ML_iOSApp: App {
     @State private var selectedTab = 1
     
     var body: some Scene {
-        let firstTab_UI = Regression1_UI()
-        let secondTab_UI = Figures_Recogniser_UI()
+        let firstTab_UI = Figures_Recogniser_UI()
+        let secondTab_UI = Regression1_UI()
         
         WindowGroup {
             TabView{
                 firstTab_UI
                     .tabItem {
-                        Text("Linear regression")
+                        Text("Neural network")
                     }
                 
                 secondTab_UI
                     .tabItem {
-                        Text("Neural network")
+                        Text("Linear regression")
                     }
             }
             .frame(idealWidth: 600, idealHeight: 600)
