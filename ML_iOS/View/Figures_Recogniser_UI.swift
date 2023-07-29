@@ -10,7 +10,7 @@ import Plot
 
 struct Figures_Recogniser_UI: View {
     enum Constants {
-        static let maxDimensionLength: CGFloat = 16
+        static let maxDimensionLength = 5
     }
 
     @State var points: [CGPoint] = []
@@ -31,8 +31,8 @@ struct Figures_Recogniser_UI: View {
                             .shiftBy(x: box.minX, y: box.minY)
                             .scalePoint(xFactor: getScaleFactor(for: box.width), yFactor: getScaleFactor(for: box.height))
                     }
-                    
-                    print(points)
+
+                    print(Self.getVector(from: points, length: CGFloat(Constants.maxDimensionLength)))
                 }
 
                 Button("Clear") {
@@ -65,7 +65,18 @@ struct Figures_Recogniser_UI: View {
     }
 
     private func getScaleFactor(for value: CGFloat) -> CGFloat {
-        1 / (value / Constants.maxDimensionLength)
+        1 / (value / CGFloat(Constants.maxDimensionLength))
+    }
+
+    static func getVector(from points: [CGPoint], length: CGFloat) -> [Int] {
+        var outputVector = [Int]()
+        Array(0...Int(length - 1)).forEach { line in
+            Array(0...Int(length - 1)).forEach { column in
+                let isContains = points.contains { Int($0.x) == line && Int($0.y) == column }
+                outputVector.append(isContains ? 1 : 0)
+            }
+        }
+        return outputVector
     }
 }
 
@@ -81,6 +92,6 @@ extension CGPoint {
     }
 
     func scalePoint(xFactor: CGFloat, yFactor: CGFloat) -> CGPoint {
-        CGPoint(x: x * xFactor, y: y * yFactor)
+        CGPoint(x: Int(x * xFactor), y: Int(y * yFactor))
     }
 }
