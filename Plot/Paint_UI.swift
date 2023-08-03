@@ -8,31 +8,33 @@
 import SwiftUI
 
 public struct Paint_UI: View {
-    public init(points: Binding<[CGPoint]>){
+    public init(points: Binding<[Point]>){
         self._points = points
     }
     
-    @Binding public var points: [CGPoint]
+    @Binding public var points: [Point]
+    
+    let point_size: CGFloat = 4
     
     public var body: some View {
         GeometryReader { geometry in
-            Path { path in
-                path.addLines(points)
-            }
-            .stroke(Color.black, lineWidth: 1)
-            .background(Color.white)
-            .gesture(
-                DragGesture(minimumDistance: 0.1)
-                    .onChanged { value in
-                        let location = value.location
-                        
-                        // Make sure the point is within the drawing area
-                        if geometry.frame(in: .local).contains(location) {
-                            points.append(location)
+            ForEach(points, id: \.self) { point in
+                            Circle()
+                                .fill(Color.black)
+                                .frame(width: self.point_size, height: self.point_size)
+                                .position(x: point.x, y: point.y)
                         }
-                    }
-            )
         }
+        .background(Color.white)
+        .gesture(
+            DragGesture()
+                .onChanged { value in
+                    let location = value.location
+
+                        let point = Point(location)
+                        points.append(point)
+                }
+        )
     }
 }
 

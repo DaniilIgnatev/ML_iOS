@@ -14,13 +14,19 @@ fileprivate var counter: Int{
     return _counter
 }
 
-public struct Point: Identifiable{
+public struct Point: Identifiable, Hashable{
     public let id: Int
     
     public init(x: Double, y: Double){
         self.id = counter
         self.x = x
         self.y = y
+    }
+    
+    public init(x: Int, y: Int){
+        self.id = counter
+        self.x = CGFloat(x)
+        self.y = CGFloat(y)
     }
     
     public init(_ point: CGPoint){
@@ -32,6 +38,18 @@ public struct Point: Identifiable{
     public let x: CGFloat
     
     public let y: CGFloat
+    
+    public var point: CGPoint{
+        return .init(x: self.x, y: self.y)
+    }
+    
+    public func shiftBy(x: CGFloat, y: CGFloat) -> Point {
+        return Point(x: self.x + x, y: self.y + y)
+    }
+
+    public func scalePoint(xFactor: CGFloat, yFactor: CGFloat) -> Point {
+        return Point(x: Int(self.x * xFactor), y: Int(self.y * yFactor))
+    }
 }
 
 public struct Line: Identifiable{

@@ -10,29 +10,26 @@ import Plot
 
 struct Figures_Recogniser_UI: View {
     enum Constants {
-        static let maxDimensionLength = 5
+        static let dimensions_size: Int = 32
     }
 
-    @State var points: [CGPoint] = []
+    @State var points_ui: [Point] = []
+    
+    @State var classification_result = ""
     
     var body: some View {
-        let paint_ui = Paint_UI(points: self.$points)
+        let paint_ui = Paint_UI(points: self.$points_ui)
 
         VStack{
+            HStack(spacing: 20){
+                Text(classification_result)
+            }
+            
             paint_ui
+            
             HStack(spacing: 20){
                 Button("Classify") {
-                    guard let box = self.getBox() else {
-                        return
-                    }
-
-                    points = points.map {
-                        $0
-                            .shiftBy(x: box.minX, y: box.minY)
-                            .scalePoint(xFactor: getScaleFactor(for: box.width), yFactor: getScaleFactor(for: box.height))
-                    }
-
-                    print(Self.getVector(from: points, length: CGFloat(Constants.maxDimensionLength)))
+                    self.classify()
                 }
 
                 Button("Clear") {
@@ -42,7 +39,24 @@ struct Figures_Recogniser_UI: View {
         }
     }
     
-    private func getBox() -> CGRect? {
+    private func classify(){
+        classification_result = "unknown"
+        
+        let normalized_points = self.normalize(points: self.points_ui)
+        let sample = generate_sample(from: normalized_points)
+        
+        self.points_ui = normalized_points
+    }
+    
+    private func normalize(points: [Point]) -> [Point]{
+        let bounding_box = getBox(points: points)!
+        let shifted_points = shiftToZero(points: points, bounding_box: bounding_box)
+        let scaled_points = scalePoints(points: shifted_points, bounding_box: bounding_box)
+        
+        return scaled_points
+    }
+    
+    private func getBox(points: [Point]) -> CGRect? {
         let min_x = points.min {
             $0.x < $1.x
         }?.x
@@ -63,35 +77,27 @@ struct Figures_Recogniser_UI: View {
 
         return .init(x: minX, y: minY, width: maxX - minX, height: maxY - minY)
     }
-
-    private func getScaleFactor(for value: CGFloat) -> CGFloat {
-        1 / (value / CGFloat(Constants.maxDimensionLength))
+    
+    private func shiftToZero(points: [Point], bounding_box: CGRect) -> [Point]{
+        return points.map({$0.shiftBy(x: -bounding_box.minX, y: -bounding_box.minY)})
+    }
+    
+    private func scalePoints(points: [Point], bounding_box: CGRect) -> [Point]{
+        return points.map { $0
+            .scalePoint(xFactor: CGFloat(Constants.dimensions_size - 1) / bounding_box.width, yFactor: CGFloat(Constants.dimensions_size - 1) / bounding_box.height)
+        }
     }
 
-    static func getVector(from points: [CGPoint], length: CGFloat) -> [Int] {
-        var outputVector = [Int]()
-        Array(0...Int(length - 1)).forEach { line in
-            Array(0...Int(length - 1)).forEach { column in
-                let isContains = points.contains { Int($0.x) == line && Int($0.y) == column }
-                outputVector.append(isContains ? 1 : 0)
-            }
-        }
-        return outputVector
+    private func generate_sample(from points: [Point]) -> [CGFloat]{
+        var sample = [CGFloat].init(repeating: -1.0, count: Constants.dimensions_size * Constants.dimensions_size)
+        points.forEach({sample[Int($0.y) * Constants.dimensions_size + Int($0.x)] = 99.0})
+        
+        return sample
     }
 }
 
 struct Figures_Recogniser_UI_Previews: PreviewProvider {
     static var previews: some View {
         Figures_Recogniser_UI()
-    }
-}
-
-extension CGPoint {
-    func shiftBy(x: CGFloat, y: CGFloat) -> CGPoint {
-        CGPoint(x: self.x - x, y: self.y - y)
-    }
-
-    func scalePoint(xFactor: CGFloat, yFactor: CGFloat) -> CGPoint {
-        CGPoint(x: Int(x * xFactor), y: Int(y * yFactor))
     }
 }
