@@ -42,10 +42,27 @@ struct Figures_Recogniser_UI: View {
     private func classify(){
         classification_result = "unknown"
         
-        let normalized_points = self.normalize(points: self.points_ui)
+        var normalized_points = self.normalize(points: self.points_ui)
+        normalized_points = self.interpolate(points: normalized_points)
+        normalized_points = self.interpolate(points: normalized_points)
         let sample = generate_sample(from: normalized_points)
         
         self.points_ui = normalized_points
+    }
+    
+    private func interpolate(points: [Point]) -> [Point]{
+        var interpolated_index_points = [(Int, Point)]()
+        var varinterpolated_points = points
+        
+        for i in 0..<(points.count - 1){
+            let p1 = points[i]
+            let p2 = points[i + 1]
+            
+            let middle_point = Point.linear_interpolation(p1: p1, p2: p2)
+            varinterpolated_points.insert(middle_point, at: i*2 + 1)
+        }
+        
+        return varinterpolated_points
     }
     
     private func normalize(points: [Point]) -> [Point]{
@@ -75,7 +92,7 @@ struct Figures_Recogniser_UI: View {
             return nil
         }
 
-        return .init(x: minX, y: minY, width: maxX - minX, height: maxY - minY)
+        return .init(x: minX, y: minY, width: maxX - minX + 1, height: maxY - minY + 1)
     }
     
     private func shiftToZero(points: [Point], bounding_box: CGRect) -> [Point]{

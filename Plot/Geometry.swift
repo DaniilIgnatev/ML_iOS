@@ -50,6 +50,18 @@ public struct Point: Identifiable, Hashable{
     public func scalePoint(xFactor: CGFloat, yFactor: CGFloat) -> Point {
         return Point(x: Int(self.x * xFactor), y: Int(self.y * yFactor))
     }
+    
+    public static func linear_interpolation(p1: Point, p2: Point) -> Point{
+        let x1 = p1.x
+        let y1 = p1.y
+        
+        let x2 = p2.x
+        let y2 = p2.y
+        
+        let x = (x2 + x1) / 2
+        let y = (y2 + y1) / 2
+        return Point(x: x, y: y)
+    }
 }
 
 public struct Line: Identifiable{
