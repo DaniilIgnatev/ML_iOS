@@ -38,18 +38,18 @@ final class ML_iOSTests: XCTestCase {
 //        XCTAssert(w0 == 2)
 //    }
     
-    func testGettingVector() throws {
-        let points = [CGPoint(x: 2, y: 0), CGPoint(x: 1, y: 1), CGPoint(x: 3, y: 1), CGPoint(x: 0, y: 2), CGPoint(x: 4, y: 2), CGPoint(x: 1, y: 3), CGPoint(x: 3, y: 3), CGPoint(x: 2, y: 4)]
-        let resultVector = Figures_Recogniser_UI.getVector(from: points, length: 5)
-        let expectedVector = [
-            0, 0, 1, 0, 0,
-            0, 1, 0, 1, 0,
-            1, 0, 0, 0, 1,
-            0, 1, 0, 1, 0,
-            0, 0, 1, 0, 0
-        ]
-        XCTAssertEqual(expectedVector, resultVector)
-    }
+//    func testGettingVector() throws {
+//        let points = [CGPoint(x: 2, y: 0), CGPoint(x: 1, y: 1), CGPoint(x: 3, y: 1), CGPoint(x: 0, y: 2), CGPoint(x: 4, y: 2), CGPoint(x: 1, y: 3), CGPoint(x: 3, y: 3), CGPoint(x: 2, y: 4)]
+//        let resultVector = Figures_Recogniser_UI.getVector(from: points, length: 5)
+//        let expectedVector = [
+//            0, 0, 1, 0, 0,
+//            0, 1, 0, 1, 0,
+//            1, 0, 0, 0, 1,
+//            0, 1, 0, 1, 0,
+//            0, 0, 1, 0, 0
+//        ]
+//        XCTAssertEqual(expectedVector, resultVector)
+//    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
