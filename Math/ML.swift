@@ -24,5 +24,4 @@ class ML: ObservableObject{
         
         return result
     }
-    
 }

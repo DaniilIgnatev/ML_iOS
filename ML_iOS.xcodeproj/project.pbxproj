@@ -35,6 +35,7 @@
 		85618BDA2A681CB900A64549 /* Math.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85618B8E2A68187F00A64549 /* Math.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		85618BDE2A681CBC00A64549 /* Plot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85618BB12A6818BF00A64549 /* Plot.framework */; };
 		85618BDF2A681CBC00A64549 /* Plot.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85618BB12A6818BF00A64549 /* Plot.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		857D89A72A817D020026909C /* NN in Resources */ = {isa = PBXBuildFile; fileRef = 857D89A62A817D020026909C /* NN */; };
 		85B989262A67FB4C00EC1E8F /* ML_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B989252A67FB4C00EC1E8F /* ML_iOSApp.swift */; };
 		85B9892A2A67FB4C00EC1E8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B989292A67FB4C00EC1E8F /* Assets.xcassets */; };
 		85B9892E2A67FB4C00EC1E8F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B9892D2A67FB4C00EC1E8F /* Preview Assets.xcassets */; };
@@ -44,6 +45,9 @@
 		85B989542A67FB7900EC1E8F /* Regression1_UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B989502A67FB7900EC1E8F /* Regression1_UI.swift */; };
 		85F8B2EB2A74219900717CB5 /* Paint_UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F8B2EA2A74219900717CB5 /* Paint_UI.swift */; };
 		85F8B2ED2A7422B300717CB5 /* Figures_Recogniser_UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F8B2EC2A7422B300717CB5 /* Figures_Recogniser_UI.swift */; };
+		A57350B52A7E41CE00FBBE09 /* Neuron.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57350B42A7E41CE00FBBE09 /* Neuron.swift */; };
+		A57350BA2A7E420000FBBE09 /* NeuralNetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57350B92A7E420000FBBE09 /* NeuralNetworkLayer.swift */; };
+		A57350C72A7E9EC300FBBE09 /* NeuralNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57350C62A7E9EC300FBBE09 /* NeuralNetwork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,6 +205,7 @@
 		85618BBA2A6818BF00A64549 /* PlotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85618BC12A6818C000A64549 /* PlotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotTests.swift; sourceTree = "<group>"; };
 		85618BD22A681C0100A64549 /* Regression1_UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regression1_UI.swift; sourceTree = "<group>"; };
+		857D89A62A817D020026909C /* NN */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NN; sourceTree = SOURCE_ROOT; };
 		85B989222A67FB4C00EC1E8F /* ML_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ML_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85B989252A67FB4C00EC1E8F /* ML_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ML_iOSApp.swift; sourceTree = "<group>"; };
 		85B989292A67FB4C00EC1E8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -217,6 +222,9 @@
 		85B989532A67FB7900EC1E8F /* Plot2D_UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plot2D_UI.swift; sourceTree = "<group>"; };
 		85F8B2EA2A74219900717CB5 /* Paint_UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paint_UI.swift; sourceTree = "<group>"; };
 		85F8B2EC2A7422B300717CB5 /* Figures_Recogniser_UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Figures_Recogniser_UI.swift; sourceTree = "<group>"; };
+		A57350B42A7E41CE00FBBE09 /* Neuron.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Neuron.swift; sourceTree = "<group>"; };
+		A57350B92A7E420000FBBE09 /* NeuralNetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuralNetworkLayer.swift; sourceTree = "<group>"; };
+		A57350C62A7E9EC300FBBE09 /* NeuralNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuralNetwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -347,13 +355,14 @@
 		85618B8F2A68187F00A64549 /* Math */ = {
 			isa = PBXGroup;
 			children = (
+				A57350A62A7E3A7500FBBE09 /* NeuralNetwork */,
 				85B989512A67FB7900EC1E8F /* ML.swift */,
 				85B989522A67FB7900EC1E8F /* LinAlg.swift */,
 				85618B902A68187F00A64549 /* Math.h */,
 				85618B912A68187F00A64549 /* Math.docc */,
 			);
 			path = Math;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		85618B9D2A68187F00A64549 /* MathTests */ = {
 			isa = PBXGroup;
@@ -393,6 +402,7 @@
 		85B989192A67FB4C00EC1E8F = {
 			isa = PBXGroup;
 			children = (
+				857D89A62A817D020026909C /* NN */,
 				85B989242A67FB4C00EC1E8F /* ML_iOS */,
 				85B989362A67FB4C00EC1E8F /* ML_iOSTests */,
 				85B989402A67FB4C00EC1E8F /* ML_iOSUITests */,
@@ -461,6 +471,16 @@
 				85B989432A67FB4C00EC1E8F /* ML_iOSUITestsLaunchTests.swift */,
 			);
 			path = ML_iOSUITests;
+			sourceTree = "<group>";
+		};
+		A57350A62A7E3A7500FBBE09 /* NeuralNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				A57350C62A7E9EC300FBBE09 /* NeuralNetwork.swift */,
+				A57350B92A7E420000FBBE09 /* NeuralNetworkLayer.swift */,
+				A57350B42A7E41CE00FBBE09 /* Neuron.swift */,
+			);
+			path = NeuralNetwork;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -802,6 +822,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				857D89A72A817D020026909C /* NN in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -885,6 +906,9 @@
 				85618BD12A6818FB00A64549 /* LinAlg.swift in Sources */,
 				85618BD02A6818FB00A64549 /* ML.swift in Sources */,
 				85618B922A68187F00A64549 /* Math.docc in Sources */,
+				A57350BA2A7E420000FBBE09 /* NeuralNetworkLayer.swift in Sources */,
+				A57350C72A7E9EC300FBBE09 /* NeuralNetwork.swift in Sources */,
+				A57350B52A7E41CE00FBBE09 /* Neuron.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1202,10 +1226,11 @@
 		85618BA62A68187F00A64549 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UA5WR73PS4;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1244,10 +1269,11 @@
 		85618BA72A68187F00A64549 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UA5WR73PS4;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1334,10 +1360,11 @@
 		85618BC92A6818C000A64549 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UA5WR73PS4;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1376,10 +1403,11 @@
 		85618BCA2A6818C000A64549 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UA5WR73PS4;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
