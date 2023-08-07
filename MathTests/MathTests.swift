@@ -27,9 +27,8 @@ class MathTests: XCTestCase {
     }
 
     func testNeuron() throws {
-        let outputs: [NeuronData] = [NeuronData(value: 0.1, weight: 25), NeuronData(value: -3, weight: 4)]
-        let neuron: NeuronProtocol = DefaultNeuron(activationFunction: SigmoidalActivation(), method: MultiplicationMethod())
-        let result = neuron.forwardPropagation(input: .init(data: outputs, offset: 10))
+        let neuron = Neuron(weights: [25, 4], bias: 10)
+        let result = neuron.forwardPropagation(input: [0.1, -3])
         
         let expectedResult: Double = 0.62245933.roundToThousands()
         let finalResult: Double = result.roundToThousands()
@@ -38,23 +37,17 @@ class MathTests: XCTestCase {
     }
 
     func testLayer() throws {
-        let neurons: [NeuronProtocol] = [
-            DefaultNeuron(activationFunction: SigmoidalActivation(), method: MultiplicationMethod()),
-            DefaultNeuron(activationFunction: SigmoidalActivation(), method: MultiplicationMethod()),
-            DefaultNeuron(activationFunction: SigmoidalActivation(), method: MultiplicationMethod()),
-            DefaultNeuron(activationFunction: SigmoidalActivation(), method: MultiplicationMethod())
-        ]
         let layerInput: [Double] = [0.4, 0.6]
         
-        let layer: LayerProtocol = DefaultLayer(
-            neurons: neurons,
+        let layer = NeuralNetworkLayer(
+            index: 0,
             weights: [
                 [1, 1.1],
                 [1.2, 1.3],
                 [1.4, 1.5],
                 [1.6, 1.7]
             ],
-            offsets: [0.5, 0.2, 0.3, 0.6]
+            biases: [0.5, 0.2, 0.3, 0.6]
         )
         let result = try! layer.forwardPropagation(input: layerInput).map { $0.roundToThousands() }
         
@@ -70,59 +63,42 @@ class MathTests: XCTestCase {
 
     func testNetwork() throws {
         // MARK: First hidden layer
-        
-        let firstLayerNeurons: [NeuronProtocol] = [
-            DefaultNeuron(activationFunction: SigmoidalActivation(), method: MultiplicationMethod()),
-            DefaultNeuron(activationFunction: SigmoidalActivation(), method: MultiplicationMethod()),
-            DefaultNeuron(activationFunction: SigmoidalActivation(), method: MultiplicationMethod()),
-            DefaultNeuron(activationFunction: SigmoidalActivation(), method: MultiplicationMethod())
-        ]
-        let firstLayer: LayerProtocol = DefaultLayer(
-            neurons: firstLayerNeurons,
+        let firstLayer = NeuralNetworkLayer(
+            index: 0,
             weights: [
                 [1, 1.1],
                 [1.2, 1.3],
                 [1.4, 1.5],
                 [1.6, 1.7]
             ],
-            offsets: [0.5, 0.2, 0.3, 0.6]
+            biases: [0.5, 0.2, 0.3, 0.6]
         )
         
         // MARK: Second hidden layer
-        
-        let secondLayerNeurons: [NeuronProtocol] = [
-            DefaultNeuron(activationFunction: SigmoidalActivation(), method: MultiplicationMethod()),
-            DefaultNeuron(activationFunction: SigmoidalActivation(), method: MultiplicationMethod()),
-            DefaultNeuron(activationFunction: SigmoidalActivation(), method: MultiplicationMethod())
-        ]
-        let secondLayer: LayerProtocol = DefaultLayer(
-            neurons: secondLayerNeurons,
+        let secondLayer = NeuralNetworkLayer(
+            index: 1,
             weights: [
                 [2.1, 1.8, 1.5, 1.2],
                 [2.0, 1.7, 1.4, 1.1],
                 [1.9, 1.6, 1.3, 1.0]
             ],
-            offsets: [0.7, 0.1, 0.4]
+            biases: [0.7, 0.1, 0.4]
         )
         
         // MARK: Third hidden layer
-        
-        let thirdLayerNeurons: [NeuronProtocol] = [
-            DefaultNeuron(activationFunction: SigmoidalActivation(), method: MultiplicationMethod())
-        ]
-        let thirdLayer: LayerProtocol = DefaultLayer(
-            neurons: thirdLayerNeurons,
+        let thirdLayer = NeuralNetworkLayer(
+            index: 2,
             weights: [
                 [1.0, 1.1, 1.2]
             ],
-            offsets: [0.8]
+            biases: [0.8]
         )
         
         // MARK: Neural network
         
         let layers = [firstLayer, secondLayer, thirdLayer]
         
-        let neuralNetwork: NeuralNetworkProtocol = DefaultNeuralNetwork(layers: layers)
+        let neuralNetwork = NeuralNetwork(name: "test", layers: layers)
         
         let result = try neuralNetwork.forwardPropagation(input: [0.4, 0.6]).map { $0.roundToThousands() }
 
@@ -133,32 +109,24 @@ class MathTests: XCTestCase {
         XCTAssertEqual(result, expectedResult)
     }
     
-    func testWithFiles() {
-        let zalupa = getMatrix(for: "B_0")
-        print(zalupa)
+    func testArrayLoad() {
+        let B_0 = LinAlg.readArray(name: "B_0", type: "txt", directory: "NN/Test/layer_0")
+        print(B_0)
         
-        XCTAssertTrue(true)
+        XCTAssertTrue(B_0.first == 0.73148591)
+        XCTAssertTrue(B_0.last == -1.29972150)
     }
     
-    private func getMatrix(for file: String) -> [[Double]] {
-        let bundle = Bundle(for: ML.self)
-        guard let filePath = bundle.path(forResource: file, ofType: "txt") else {
-            return []
-        }
-        let content = try! String(contentsOfFile: filePath, encoding: .utf8)
+    func testMatrixLoad() {
+        let W_0 = LinAlg.readMatrix(name: "W_0", type: "txt", directory: "NN/Test/layer_0")
+        print(W_0)
         
-        let lines = content.components(separatedBy: .newlines)
-        
-        return lines.map { line in
-            line.split(separator: " ").compactMap { Double($0) }
-        }
+        XCTAssertTrue(W_0.count == 100)
+        XCTAssertTrue(W_0.first?.count == 1024)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testNeuralNetworkLoad(){
+        let network = NeuralNetwork.init(name: "test", hidden_layers_number: 2)
     }
 }
 

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Plot
+import Math
 
 struct Figures_Recogniser_UI: View {
     enum Constants {
@@ -16,6 +17,8 @@ struct Figures_Recogniser_UI: View {
     @State var points_ui: [Point] = []
     
     @State var classification_result = ""
+    
+    let rectangle_classifier = NeuralNetwork(name: "Rectangle", hidden_layers_number: 2)
     
     var body: some View {
         let paint_ui = Paint_UI(points: self.$points_ui)
