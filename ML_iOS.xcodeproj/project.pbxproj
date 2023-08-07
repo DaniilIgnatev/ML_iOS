@@ -57,6 +57,12 @@
 		A57350C72A7E9EC300FBBE09 /* DefaultNeuralNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57350C62A7E9EC300FBBE09 /* DefaultNeuralNetwork.swift */; };
 		A57350CC2A7EFE9800FBBE09 /* NeuronMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57350CB2A7EFE9800FBBE09 /* NeuronMethod.swift */; };
 		A57350CE2A7EFF1300FBBE09 /* MultiplicationMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57350CD2A7EFF1300FBBE09 /* MultiplicationMethod.swift */; };
+		A5FF71A22A8009200050494C /* B_2.txt in Resources */ = {isa = PBXBuildFile; fileRef = A5FF719A2A8009200050494C /* B_2.txt */; };
+		A5FF71A32A8009200050494C /* W_2.txt in Resources */ = {isa = PBXBuildFile; fileRef = A5FF719B2A8009200050494C /* W_2.txt */; };
+		A5FF71A42A8009200050494C /* B_0.txt in Resources */ = {isa = PBXBuildFile; fileRef = A5FF719D2A8009200050494C /* B_0.txt */; };
+		A5FF71A52A8009200050494C /* W_0.txt in Resources */ = {isa = PBXBuildFile; fileRef = A5FF719E2A8009200050494C /* W_0.txt */; };
+		A5FF71A62A8009200050494C /* B_1.txt in Resources */ = {isa = PBXBuildFile; fileRef = A5FF71A02A8009200050494C /* B_1.txt */; };
+		A5FF71A72A8009200050494C /* W_1.txt in Resources */ = {isa = PBXBuildFile; fileRef = A5FF71A12A8009200050494C /* W_1.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -243,6 +249,12 @@
 		A57350C62A7E9EC300FBBE09 /* DefaultNeuralNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNeuralNetwork.swift; sourceTree = "<group>"; };
 		A57350CB2A7EFE9800FBBE09 /* NeuronMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuronMethod.swift; sourceTree = "<group>"; };
 		A57350CD2A7EFF1300FBBE09 /* MultiplicationMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplicationMethod.swift; sourceTree = "<group>"; };
+		A5FF719A2A8009200050494C /* B_2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = B_2.txt; sourceTree = "<group>"; };
+		A5FF719B2A8009200050494C /* W_2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = W_2.txt; sourceTree = "<group>"; };
+		A5FF719D2A8009200050494C /* B_0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = B_0.txt; sourceTree = "<group>"; };
+		A5FF719E2A8009200050494C /* W_0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = W_0.txt; sourceTree = "<group>"; };
+		A5FF71A02A8009200050494C /* B_1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = B_1.txt; sourceTree = "<group>"; };
+		A5FF71A12A8009200050494C /* W_1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = W_1.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -373,6 +385,9 @@
 		85618B8F2A68187F00A64549 /* Math */ = {
 			isa = PBXGroup;
 			children = (
+				A5FF719C2A8009200050494C /* layer_0 */,
+				A5FF719F2A8009200050494C /* layer_1 */,
+				A5FF71992A8009200050494C /* layer_2 */,
 				A57350A62A7E3A7500FBBE09 /* NeuralNetwork */,
 				85B989512A67FB7900EC1E8F /* ML.swift */,
 				85B989522A67FB7900EC1E8F /* LinAlg.swift */,
@@ -564,6 +579,33 @@
 				A57350CD2A7EFF1300FBBE09 /* MultiplicationMethod.swift */,
 			);
 			path = NeuronMethod;
+			sourceTree = "<group>";
+		};
+		A5FF71992A8009200050494C /* layer_2 */ = {
+			isa = PBXGroup;
+			children = (
+				A5FF719A2A8009200050494C /* B_2.txt */,
+				A5FF719B2A8009200050494C /* W_2.txt */,
+			);
+			path = layer_2;
+			sourceTree = "<group>";
+		};
+		A5FF719C2A8009200050494C /* layer_0 */ = {
+			isa = PBXGroup;
+			children = (
+				A5FF719D2A8009200050494C /* B_0.txt */,
+				A5FF719E2A8009200050494C /* W_0.txt */,
+			);
+			path = layer_0;
+			sourceTree = "<group>";
+		};
+		A5FF719F2A8009200050494C /* layer_1 */ = {
+			isa = PBXGroup;
+			children = (
+				A5FF71A02A8009200050494C /* B_1.txt */,
+				A5FF71A12A8009200050494C /* W_1.txt */,
+			);
+			path = layer_1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -905,6 +947,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5FF71A72A8009200050494C /* W_1.txt in Resources */,
+				A5FF71A42A8009200050494C /* B_0.txt in Resources */,
+				A5FF71A32A8009200050494C /* W_2.txt in Resources */,
+				A5FF71A62A8009200050494C /* B_1.txt in Resources */,
+				A5FF71A52A8009200050494C /* W_0.txt in Resources */,
+				A5FF71A22A8009200050494C /* B_2.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

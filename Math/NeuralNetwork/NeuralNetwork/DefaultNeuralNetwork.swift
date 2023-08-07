@@ -19,6 +19,7 @@ class DefaultNeuralNetwork: NeuralNetworkProtocol {
 
         try layers.forEach { layer in
             dynamicInput = try layer.forwardPropagation(input: dynamicInput)
+            print(dynamicInput)
         }
 
         return dynamicInput

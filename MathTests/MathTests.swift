@@ -132,6 +132,27 @@ class MathTests: XCTestCase {
         
         XCTAssertEqual(result, expectedResult)
     }
+    
+    func testWithFiles() {
+        let zalupa = getMatrix(for: "B_0")
+        print(zalupa)
+        
+        XCTAssertTrue(true)
+    }
+    
+    private func getMatrix(for file: String) -> [[Double]] {
+        let bundle = Bundle(for: ML.self)
+        guard let filePath = bundle.path(forResource: file, ofType: "txt") else {
+            return []
+        }
+        let content = try! String(contentsOfFile: filePath, encoding: .utf8)
+        
+        let lines = content.components(separatedBy: .newlines)
+        
+        return lines.map { line in
+            line.split(separator: " ").compactMap { Double($0) }
+        }
+    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
