@@ -7,6 +7,7 @@
 
 import Foundation
 import simd
+import Accelerate
 
 class ML: ObservableObject{    
     public static func ols_1(input: [Double], out: [Double]) -> Double{
@@ -24,4 +25,11 @@ class ML: ObservableObject{
         
         return result
     }
+}
+
+
+public func softmax(x: [Double]) -> [Double]{
+    let e_part = x.map({exp($0)})
+    let sum = e_part.reduce(0, +)
+    return e_part.map({$0 / sum})
 }

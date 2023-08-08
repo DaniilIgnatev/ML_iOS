@@ -11,7 +11,7 @@ import SwiftUI
 struct ML_watchOS_Watch_AppApp: App {
     var body: some Scene {
         WindowGroup {
-            Regression1_UI()
+            Figures_Recogniser_UI()
         }
     }
 }

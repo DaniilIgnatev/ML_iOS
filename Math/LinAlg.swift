@@ -48,12 +48,12 @@ class LinAlg{
             return []
         }
         
-        var lines = content.components(separatedBy: .newlines)
-        if lines.last == ""{
-            lines.removeLast()
-        }
+        let lines = content.components(separatedBy: .newlines)
         
-        return lines.map { line in
+        return lines.compactMap { line in
+            guard line != "" else {
+                return nil
+            }
             return line.split(separator: " ").compactMap { Double($0) }
         }
     }
@@ -63,13 +63,10 @@ class LinAlg{
             return []
         }
         
-        var lines = content.components(separatedBy: .newlines)
-        if lines.last == ""{
-            lines.removeLast()
-        }
+        let lines = content.components(separatedBy: .newlines)
         
-        return lines.map { line in
-            return Double(line)!
+        return lines.compactMap { line in
+            return Double(line)
         }
     }
 }

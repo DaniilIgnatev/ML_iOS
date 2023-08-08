@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8517642A2A82C1CE00FAC720 /* Figures_Recogniser_UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851764292A82C1CE00FAC720 /* Figures_Recogniser_UI.swift */; };
 		85618B592A6817EE00A64549 /* ML_watchOS Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 85618B582A6817EE00A64549 /* ML_watchOS Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		85618B5E2A6817EE00A64549 /* ML_watchOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85618B5D2A6817EE00A64549 /* ML_watchOSApp.swift */; };
 		85618B622A6817EF00A64549 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85618B612A6817EF00A64549 /* Assets.xcassets */; };
@@ -183,6 +184,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		851764292A82C1CE00FAC720 /* Figures_Recogniser_UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Figures_Recogniser_UI.swift; sourceTree = "<group>"; };
 		85618B4F2A680C5500A64549 /* Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
 		85618B532A6817EE00A64549 /* ML_watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ML_watchOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85618B582A6817EE00A64549 /* ML_watchOS Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ML_watchOS Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -323,6 +325,7 @@
 				85618B5D2A6817EE00A64549 /* ML_watchOSApp.swift */,
 				85618B612A6817EF00A64549 /* Assets.xcassets */,
 				85618B632A6817EF00A64549 /* Preview Content */,
+				851764292A82C1CE00FAC720 /* Figures_Recogniser_UI.swift */,
 			);
 			path = "ML_watchOS Watch App";
 			sourceTree = "<group>";
@@ -877,6 +880,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8517642A2A82C1CE00FAC720 /* Figures_Recogniser_UI.swift in Sources */,
 				85618BD32A681C0100A64549 /* Regression1_UI.swift in Sources */,
 				85618B5E2A6817EE00A64549 /* ML_watchOSApp.swift in Sources */,
 			);

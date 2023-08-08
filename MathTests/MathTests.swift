@@ -110,7 +110,7 @@ class MathTests: XCTestCase {
     }
     
     func testArrayLoad() {
-        let B_0 = LinAlg.readArray(name: "B_0", type: "txt", directory: "NN/Test/layer_0")
+        let B_0 = LinAlg.readArray(name: "B", type: "txt", directory: "NN/Test/layer_0")
         print(B_0)
         
         XCTAssertTrue(B_0.first == 0.73148591)
@@ -118,7 +118,7 @@ class MathTests: XCTestCase {
     }
     
     func testMatrixLoad() {
-        let W_0 = LinAlg.readMatrix(name: "W_0", type: "txt", directory: "NN/Test/layer_0")
+        let W_0 = LinAlg.readMatrix(name: "W", type: "txt", directory: "NN/Test/layer_0")
         print(W_0)
         
         XCTAssertTrue(W_0.count == 100)

@@ -26,7 +26,7 @@ public class NeuralNetwork {
         self.layers = layers
     }
     
-    func forwardPropagation(input: [Double]) throws -> [Double] {
+    public func forwardPropagation(input: [Double]) throws -> [Double] {
         var dynamicInput = input
         
         try layers.forEach { layer in

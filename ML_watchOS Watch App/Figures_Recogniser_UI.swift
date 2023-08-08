@@ -1,8 +1,8 @@
 //
 //  Figures_Recogniser_UI.swift
-//  ML_iOS
+//  ML_watchOS Watch App
 //
-//  Created by Daniil Ignatev on 28.07.23.
+//  Created by Daniil Ignatev on 08.08.23.
 //
 
 import SwiftUI

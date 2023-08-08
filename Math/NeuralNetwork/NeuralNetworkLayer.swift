@@ -19,17 +19,10 @@ public class NeuralNetworkLayer {
     init(root_path: String, index: Int){
         self.index = index
         
-        var neurons = [Neuron]()
+        let W = LinAlg.readMatrix(name: "W", type: "txt", directory: root_path)
+        let B = LinAlg.readArray(name: "B", type: "txt", directory: root_path)
         
-        let W = LinAlg.readMatrix(name: "W_\(self.index)", type: "txt", directory: root_path)
-        let B = LinAlg.readArray(name: "B_\(self.index)", type: "txt", directory: root_path)
-        let neurons_number = B.count
-        
-        for i in 0..<neurons_number{
-            let neuron = Neuron.init(weights: W[i], bias: B[i])
-            neurons.append(neuron)
-        }
-        self.neurons = neurons
+        self.neurons = NeuralNetworkLayer.initNeurons(weights: W, biases: B)
     }
     
     static func initNeurons(weights: [[Double]], biases: [Double]) -> [Neuron]{
