@@ -42,7 +42,7 @@ public struct Figures_Recogniser_UI: View {
                 paint_ui
                 
                 HStack(spacing: 20){
-                    Button("Classify") {
+                    Button("Check") {
                         self.classify()
                     }
                     

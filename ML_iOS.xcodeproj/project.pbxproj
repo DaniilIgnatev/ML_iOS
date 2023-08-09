@@ -29,15 +29,15 @@
 		85618BCF2A6818F600A64549 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85618B4F2A680C5500A64549 /* Geometry.swift */; };
 		85618BD12A6818FB00A64549 /* Num.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B989522A67FB7900EC1E8F /* Num.swift */; };
 		857D89A72A817D020026909C /* NN in Resources */ = {isa = PBXBuildFile; fileRef = 857D89A62A817D020026909C /* NN */; };
-		858CD6512A83CF4E00FE5BB2 /* FiguresClassifierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CD6502A83CF4E00FE5BB2 /* FiguresClassifierApp.swift */; };
-		858CD6552A83CF4F00FE5BB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 858CD6542A83CF4F00FE5BB2 /* Assets.xcassets */; };
-		858CD6582A83CF4F00FE5BB2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 858CD6572A83CF4F00FE5BB2 /* Preview Assets.xcassets */; };
-		858CD65B2A83CF4F00FE5BB2 /* FiguresClassifier Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 858CD64E2A83CF4E00FE5BB2 /* FiguresClassifier Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		85AE75362A83D201000DA716 /* Math.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85618B8E2A68187F00A64549 /* Math.framework */; };
-		85AE75372A83D201000DA716 /* Math.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85618B8E2A68187F00A64549 /* Math.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		85AE753A2A83D201000DA716 /* Plot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85618BB12A6818BF00A64549 /* Plot.framework */; };
-		85AE753B2A83D201000DA716 /* Plot.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85618BB12A6818BF00A64549 /* Plot.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		85AE753E2A83D22F000DA716 /* Figures_Recogniser_UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F8B2EC2A7422B300717CB5 /* Figures_Recogniser_UI.swift */; };
+		858B2A7E2A83D59300DEECE1 /* FiguresClassifier Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 858B2A7D2A83D59300DEECE1 /* FiguresClassifier Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		858B2A832A83D59400DEECE1 /* FiguresClassifierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B2A822A83D59400DEECE1 /* FiguresClassifierApp.swift */; };
+		858B2A872A83D59400DEECE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 858B2A862A83D59400DEECE1 /* Assets.xcassets */; };
+		858B2A8A2A83D59400DEECE1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 858B2A892A83D59400DEECE1 /* Preview Assets.xcassets */; };
+		858B2A982A83D5D800DEECE1 /* Figures_Recogniser_UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B2A972A83D5D800DEECE1 /* Figures_Recogniser_UI.swift */; };
+		858B2A992A83D5EE00DEECE1 /* Math.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85618B8E2A68187F00A64549 /* Math.framework */; };
+		858B2A9A2A83D5EE00DEECE1 /* Math.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85618B8E2A68187F00A64549 /* Math.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		858B2A9D2A83D5EE00DEECE1 /* Plot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85618BB12A6818BF00A64549 /* Plot.framework */; };
+		858B2A9E2A83D5EE00DEECE1 /* Plot.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85618BB12A6818BF00A64549 /* Plot.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		85AE75402A83D232000DA716 /* Figures_Recogniser_UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AE753F2A83D232000DA716 /* Figures_Recogniser_UI.swift */; };
 		85B989262A67FB4C00EC1E8F /* ML_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B989252A67FB4C00EC1E8F /* ML_iOSApp.swift */; };
 		85B9892A2A67FB4C00EC1E8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B989292A67FB4C00EC1E8F /* Assets.xcassets */; };
@@ -106,21 +106,21 @@
 			remoteGlobalIDString = 85618BB02A6818BF00A64549;
 			remoteInfo = Plot;
 		};
-		858CD6592A83CF4F00FE5BB2 /* PBXContainerItemProxy */ = {
+		858B2A7F2A83D59300DEECE1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 85B9891A2A67FB4C00EC1E8F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 858CD64D2A83CF4E00FE5BB2;
+			remoteGlobalIDString = 858B2A7C2A83D59300DEECE1;
 			remoteInfo = "FiguresClassifier Watch App";
 		};
-		85AE75382A83D201000DA716 /* PBXContainerItemProxy */ = {
+		858B2A9B2A83D5EE00DEECE1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 85B9891A2A67FB4C00EC1E8F /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 85618B8D2A68187F00A64549;
 			remoteInfo = Math;
 		};
-		85AE753C2A83D201000DA716 /* PBXContainerItemProxy */ = {
+		858B2A9F2A83D5EE00DEECE1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 85B9891A2A67FB4C00EC1E8F /* Project object */;
 			proxyType = 1;
@@ -154,27 +154,37 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		858B2A8E2A83D59400DEECE1 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				858B2A7E2A83D59300DEECE1 /* FiguresClassifier Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		858B2AA12A83D5EE00DEECE1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				858B2A9A2A83D5EE00DEECE1 /* Math.framework in Embed Frameworks */,
+				858B2A9E2A83D5EE00DEECE1 /* Plot.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		858CD65F2A83CF4F00FE5BB2 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				858CD65B2A83CF4F00FE5BB2 /* FiguresClassifier Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		858CD6642A83D03600FE5BB2 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				85AE753B2A83D201000DA716 /* Plot.framework in Embed Frameworks */,
-				85AE75372A83D201000DA716 /* Math.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -195,10 +205,12 @@
 		85618BBA2A6818BF00A64549 /* PlotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85618BC12A6818C000A64549 /* PlotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotTests.swift; sourceTree = "<group>"; };
 		857D89A62A817D020026909C /* NN */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NN; sourceTree = SOURCE_ROOT; };
-		858CD64E2A83CF4E00FE5BB2 /* FiguresClassifier Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FiguresClassifier Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		858CD6502A83CF4E00FE5BB2 /* FiguresClassifierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiguresClassifierApp.swift; sourceTree = "<group>"; };
-		858CD6542A83CF4F00FE5BB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		858CD6572A83CF4F00FE5BB2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		858B2A782A83D59300DEECE1 /* FiguresClassifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FiguresClassifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		858B2A7D2A83D59300DEECE1 /* FiguresClassifier Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FiguresClassifier Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		858B2A822A83D59400DEECE1 /* FiguresClassifierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiguresClassifierApp.swift; sourceTree = "<group>"; };
+		858B2A862A83D59400DEECE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		858B2A892A83D59400DEECE1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		858B2A972A83D5D800DEECE1 /* Figures_Recogniser_UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Figures_Recogniser_UI.swift; sourceTree = "<group>"; };
 		85AE753F2A83D232000DA716 /* Figures_Recogniser_UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Figures_Recogniser_UI.swift; sourceTree = "<group>"; };
 		85B989222A67FB4C00EC1E8F /* ML_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ML_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85B989252A67FB4C00EC1E8F /* ML_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ML_iOSApp.swift; sourceTree = "<group>"; };
@@ -209,7 +221,6 @@
 		85B989522A67FB7900EC1E8F /* Num.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Num.swift; sourceTree = "<group>"; };
 		85B989532A67FB7900EC1E8F /* Plot2D_UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plot2D_UI.swift; sourceTree = "<group>"; };
 		85F8B2EA2A74219900717CB5 /* Paint_UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paint_UI.swift; sourceTree = "<group>"; };
-		85F8B2EC2A7422B300717CB5 /* Figures_Recogniser_UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Figures_Recogniser_UI.swift; sourceTree = "<group>"; };
 		A57350B42A7E41CE00FBBE09 /* Neuron.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Neuron.swift; sourceTree = "<group>"; };
 		A57350B92A7E420000FBBE09 /* NeuralNetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuralNetworkLayer.swift; sourceTree = "<group>"; };
 		A57350C62A7E9EC300FBBE09 /* NeuralNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuralNetwork.swift; sourceTree = "<group>"; };
@@ -254,12 +265,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		858CD64B2A83CF4E00FE5BB2 /* Frameworks */ = {
+		858B2A7A2A83D59300DEECE1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85AE753A2A83D201000DA716 /* Plot.framework in Frameworks */,
-				85AE75362A83D201000DA716 /* Math.framework in Frameworks */,
+				858B2A992A83D5EE00DEECE1 /* Math.framework in Frameworks */,
+				858B2A9D2A83D5EE00DEECE1 /* Plot.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,21 +368,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		858CD64F2A83CF4E00FE5BB2 /* FiguresClassifier Watch App */ = {
+		858B2A812A83D59400DEECE1 /* FiguresClassifier Watch App */ = {
 			isa = PBXGroup;
 			children = (
-				85F8B2EC2A7422B300717CB5 /* Figures_Recogniser_UI.swift */,
-				858CD6502A83CF4E00FE5BB2 /* FiguresClassifierApp.swift */,
-				858CD6542A83CF4F00FE5BB2 /* Assets.xcassets */,
-				858CD6562A83CF4F00FE5BB2 /* Preview Content */,
+				858B2A972A83D5D800DEECE1 /* Figures_Recogniser_UI.swift */,
+				858B2A822A83D59400DEECE1 /* FiguresClassifierApp.swift */,
+				858B2A862A83D59400DEECE1 /* Assets.xcassets */,
+				858B2A882A83D59400DEECE1 /* Preview Content */,
 			);
 			path = "FiguresClassifier Watch App";
 			sourceTree = "<group>";
 		};
-		858CD6562A83CF4F00FE5BB2 /* Preview Content */ = {
+		858B2A882A83D59400DEECE1 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				858CD6572A83CF4F00FE5BB2 /* Preview Assets.xcassets */,
+				858B2A892A83D59400DEECE1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -386,7 +397,7 @@
 				85618BB22A6818BF00A64549 /* Plot */,
 				85618BC02A6818C000A64549 /* PlotTests */,
 				8524635E2A83BB4D006FFEA3 /* ML */,
-				858CD64F2A83CF4E00FE5BB2 /* FiguresClassifier Watch App */,
+				858B2A812A83D59400DEECE1 /* FiguresClassifier Watch App */,
 				85B989232A67FB4C00EC1E8F /* Products */,
 				85618BD82A681CB900A64549 /* Frameworks */,
 			);
@@ -401,7 +412,8 @@
 				85618BB12A6818BF00A64549 /* Plot.framework */,
 				85618BBA2A6818BF00A64549 /* PlotTests.xctest */,
 				8524635D2A83BB4D006FFEA3 /* ML.framework */,
-				858CD64E2A83CF4E00FE5BB2 /* FiguresClassifier Watch App.app */,
+				858B2A782A83D59300DEECE1 /* FiguresClassifier.app */,
+				858B2A7D2A83D59300DEECE1 /* FiguresClassifier Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -559,24 +571,41 @@
 			productReference = 85618BBA2A6818BF00A64549 /* PlotTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		858CD64D2A83CF4E00FE5BB2 /* FiguresClassifier Watch App */ = {
+		858B2A772A83D59300DEECE1 /* FiguresClassifier */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 858CD65C2A83CF4F00FE5BB2 /* Build configuration list for PBXNativeTarget "FiguresClassifier Watch App" */;
+			buildConfigurationList = 858B2A8F2A83D59400DEECE1 /* Build configuration list for PBXNativeTarget "FiguresClassifier" */;
 			buildPhases = (
-				858CD64A2A83CF4E00FE5BB2 /* Sources */,
-				858CD64B2A83CF4E00FE5BB2 /* Frameworks */,
-				858CD64C2A83CF4E00FE5BB2 /* Resources */,
-				858CD6642A83D03600FE5BB2 /* Embed Frameworks */,
+				858B2A762A83D59300DEECE1 /* Resources */,
+				858B2A8E2A83D59400DEECE1 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				85AE75392A83D201000DA716 /* PBXTargetDependency */,
-				85AE753D2A83D201000DA716 /* PBXTargetDependency */,
+				858B2A802A83D59300DEECE1 /* PBXTargetDependency */,
+			);
+			name = FiguresClassifier;
+			productName = FiguresClassifier;
+			productReference = 858B2A782A83D59300DEECE1 /* FiguresClassifier.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		858B2A7C2A83D59300DEECE1 /* FiguresClassifier Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 858B2A8B2A83D59400DEECE1 /* Build configuration list for PBXNativeTarget "FiguresClassifier Watch App" */;
+			buildPhases = (
+				858B2A792A83D59300DEECE1 /* Sources */,
+				858B2A7A2A83D59300DEECE1 /* Frameworks */,
+				858B2A7B2A83D59300DEECE1 /* Resources */,
+				858B2AA12A83D5EE00DEECE1 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				858B2A9C2A83D5EE00DEECE1 /* PBXTargetDependency */,
+				858B2AA02A83D5EE00DEECE1 /* PBXTargetDependency */,
 			);
 			name = "FiguresClassifier Watch App";
 			productName = "FiguresClassifier Watch App";
-			productReference = 858CD64E2A83CF4E00FE5BB2 /* FiguresClassifier Watch App.app */;
+			productReference = 858B2A7D2A83D59300DEECE1 /* FiguresClassifier Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
 		85B989212A67FB4C00EC1E8F /* ML_iOS */ = {
@@ -595,7 +624,6 @@
 				85618BA22A68187F00A64549 /* PBXTargetDependency */,
 				85618BC52A6818C000A64549 /* PBXTargetDependency */,
 				852463702A83BDA4006FFEA3 /* PBXTargetDependency */,
-				858CD65A2A83CF4F00FE5BB2 /* PBXTargetDependency */,
 			);
 			name = ML_iOS;
 			productName = ML_iOS;
@@ -630,7 +658,10 @@
 						CreatedOnToolsVersion = 14.3.1;
 						TestTargetID = 85B989212A67FB4C00EC1E8F;
 					};
-					858CD64D2A83CF4E00FE5BB2 = {
+					858B2A772A83D59300DEECE1 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					858B2A7C2A83D59300DEECE1 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
 					85B989212A67FB4C00EC1E8F = {
@@ -657,7 +688,8 @@
 				85618BB02A6818BF00A64549 /* Plot */,
 				85618BB92A6818BF00A64549 /* PlotTests */,
 				8524635C2A83BB4D006FFEA3 /* ML */,
-				858CD64D2A83CF4E00FE5BB2 /* FiguresClassifier Watch App */,
+				858B2A772A83D59300DEECE1 /* FiguresClassifier */,
+				858B2A7C2A83D59300DEECE1 /* FiguresClassifier Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -699,12 +731,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		858CD64C2A83CF4E00FE5BB2 /* Resources */ = {
+		858B2A762A83D59300DEECE1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				858CD6582A83CF4F00FE5BB2 /* Preview Assets.xcassets in Resources */,
-				858CD6552A83CF4F00FE5BB2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		858B2A7B2A83D59300DEECE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				858B2A8A2A83D59400DEECE1 /* Preview Assets.xcassets in Resources */,
+				858B2A872A83D59400DEECE1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -767,12 +806,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		858CD64A2A83CF4E00FE5BB2 /* Sources */ = {
+		858B2A792A83D59300DEECE1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85AE753E2A83D22F000DA716 /* Figures_Recogniser_UI.swift in Sources */,
-				858CD6512A83CF4E00FE5BB2 /* FiguresClassifierApp.swift in Sources */,
+				858B2A982A83D5D800DEECE1 /* Figures_Recogniser_UI.swift in Sources */,
+				858B2A832A83D59400DEECE1 /* FiguresClassifierApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -829,20 +868,20 @@
 			target = 85618BB02A6818BF00A64549 /* Plot */;
 			targetProxy = 85618BC42A6818C000A64549 /* PBXContainerItemProxy */;
 		};
-		858CD65A2A83CF4F00FE5BB2 /* PBXTargetDependency */ = {
+		858B2A802A83D59300DEECE1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 858CD64D2A83CF4E00FE5BB2 /* FiguresClassifier Watch App */;
-			targetProxy = 858CD6592A83CF4F00FE5BB2 /* PBXContainerItemProxy */;
+			target = 858B2A7C2A83D59300DEECE1 /* FiguresClassifier Watch App */;
+			targetProxy = 858B2A7F2A83D59300DEECE1 /* PBXContainerItemProxy */;
 		};
-		85AE75392A83D201000DA716 /* PBXTargetDependency */ = {
+		858B2A9C2A83D5EE00DEECE1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 85618B8D2A68187F00A64549 /* Math */;
-			targetProxy = 85AE75382A83D201000DA716 /* PBXContainerItemProxy */;
+			targetProxy = 858B2A9B2A83D5EE00DEECE1 /* PBXContainerItemProxy */;
 		};
-		85AE753D2A83D201000DA716 /* PBXTargetDependency */ = {
+		858B2AA02A83D5EE00DEECE1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 85618BB02A6818BF00A64549 /* Plot */;
-			targetProxy = 85AE753C2A83D201000DA716 /* PBXContainerItemProxy */;
+			targetProxy = 858B2A9F2A83D5EE00DEECE1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1191,7 +1230,7 @@
 			};
 			name = Release;
 		};
-		858CD65D2A83CF4F00FE5BB2 /* Debug */ = {
+		858B2A8C2A83D59400DEECE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1204,13 +1243,13 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = FiguresClassifier;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "DaniilIgnatev.ML-iOS";
+				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "DaniilIgnatev.ML-iOS.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = DaniilIgnatev.FiguresClassifier.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1221,7 +1260,7 @@
 			};
 			name = Debug;
 		};
-		858CD65E2A83CF4F00FE5BB2 /* Release */ = {
+		858B2A8D2A83D59400DEECE1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1234,13 +1273,13 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = FiguresClassifier;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "DaniilIgnatev.ML-iOS";
+				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "DaniilIgnatev.ML-iOS.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = DaniilIgnatev.FiguresClassifier.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1249,6 +1288,39 @@
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
 				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Release;
+		};
+		858B2A902A83D59400DEECE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UA5WR73PS4;
+				INFOPLIST_KEY_CFBundleDisplayName = FiguresClassifier;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = DaniilIgnatev.FiguresClassifier;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		858B2A912A83D59400DEECE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UA5WR73PS4;
+				INFOPLIST_KEY_CFBundleDisplayName = FiguresClassifier;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = DaniilIgnatev.FiguresClassifier;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -1487,11 +1559,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		858CD65C2A83CF4F00FE5BB2 /* Build configuration list for PBXNativeTarget "FiguresClassifier Watch App" */ = {
+		858B2A8B2A83D59400DEECE1 /* Build configuration list for PBXNativeTarget "FiguresClassifier Watch App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				858CD65D2A83CF4F00FE5BB2 /* Debug */,
-				858CD65E2A83CF4F00FE5BB2 /* Release */,
+				858B2A8C2A83D59400DEECE1 /* Debug */,
+				858B2A8D2A83D59400DEECE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		858B2A8F2A83D59400DEECE1 /* Build configuration list for PBXNativeTarget "FiguresClassifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				858B2A902A83D59400DEECE1 /* Debug */,
+				858B2A912A83D59400DEECE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
