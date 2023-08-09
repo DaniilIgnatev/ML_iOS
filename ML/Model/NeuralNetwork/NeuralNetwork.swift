@@ -31,7 +31,7 @@ public class NeuralNetwork {
         
         try layers.forEach { layer in
             dynamicInput = try layer.forwardPropagation(input: dynamicInput)
-            print(dynamicInput)
+//            print(dynamicInput)
         }
         
         return dynamicInput
