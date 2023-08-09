@@ -8,8 +8,14 @@
 import Foundation
 import simd
 
-class LinAlg{
-    internal static func dot(_ vector1: SIMD32<Double>,_ vector2: SIMD32<Double>) -> simd_double1{
+public class Num {
+    public static func softmax(x: [Double]) -> [Double]{
+        let e_part = x.map({exp($0)})
+        let sum = e_part.reduce(0, +)
+        return e_part.map({$0 / sum})
+    }
+    
+    public static func dot(_ vector1: SIMD32<Double>,_ vector2: SIMD32<Double>) -> simd_double1{
         var dotProduct: Double = 0.0
         for i in 0..<SIMD32<Double>.scalarCount {
             dotProduct += vector1[i] * vector2[i]
@@ -19,7 +25,7 @@ class LinAlg{
     }
     
     
-    internal static func init_simd32(data: [Double]) -> SIMD32<Double>{
+    public static func init_simd32(data: [Double]) -> SIMD32<Double>{
         var V = SIMD32<Double>.init(repeating: 0)
         for i in 0..<data.count{
             V[i] = data[i]
@@ -28,12 +34,12 @@ class LinAlg{
         return V
     }
     
-    func line(x1: [Double], w0: Double, w1: Double) -> [Double]{
+    public func line(x1: [Double], w0: Double, w1: Double) -> [Double]{
         return x1.map { w0 * $0 + w1}
     }
     
-    private static func readFile(_ name: String,_ type: String,_ directory: String) -> String?{
-        let bundle = Bundle(for: ML.self)
+    public static func readFile(_ name: String,_ type: String,_ directory: String) -> String?{
+        let bundle = Bundle(for: Num.self)
 
         guard let filePath = bundle.path(forResource: name, ofType: type, inDirectory: directory) else {
             print("File \(name).\(type) in \(directory) not found")
@@ -43,7 +49,7 @@ class LinAlg{
         return try? String(contentsOfFile: filePath, encoding: .utf8)
     }
     
-    static func readMatrix(name: String, type: String, directory: String) -> [[Double]] {
+    public static func readMatrix(name: String, type: String, directory: String) -> [[Double]] {
         guard let content = readFile(name, type, directory) else{
             return []
         }
@@ -58,7 +64,7 @@ class LinAlg{
         }
     }
     
-    static func readArray(name: String, type: String, directory: String) -> [Double] {
+    public static func readArray(name: String, type: String, directory: String) -> [Double] {
         guard let content = readFile(name, type, directory) else{
             return []
         }
@@ -68,5 +74,10 @@ class LinAlg{
         return lines.compactMap { line in
             return Double(line)
         }
+    }
+    
+    public static func truncateDouble(value: Double, toDecimalPlaces places: Int) -> Double {
+        let multiplier = pow(10.0, Double(places))
+        return Double(Int(value * multiplier)) / multiplier
     }
 }

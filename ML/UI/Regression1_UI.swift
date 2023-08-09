@@ -8,11 +8,11 @@
 import SwiftUI
 import Plot
 
-struct Regression1_UI: View {
+public struct Regression1_UI: View {
     
     @State private var w0: Double = 0.7
     
-    var body: some View {
+    public var body: some View {
         Plot2D_UI(points: [
             .init(x: 1, y: 3),
             .init(x: 2, y: 4),

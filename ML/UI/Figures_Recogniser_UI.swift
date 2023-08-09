@@ -1,18 +1,24 @@
 //
 //  Figures_Recogniser_UI.swift
-//  ML_watchOS Watch App
+//  ML_iOS
 //
-//  Created by Daniil Ignatev on 08.08.23.
+//  Created by Daniil Ignatev on 28.07.23.
 //
 
 import SwiftUI
 import Plot
 import Math
 
-struct Figures_Recogniser_UI: View {
+public struct Figures_Recogniser_UI: View {
     enum Constants {
         static let dimensions_size: Int = 32
     }
+    
+    public init(){
+        
+    }
+    
+    public let background_color = Color.init(red: 42 / 255, green: 45 / 255, blue: 44 / 255)
     
     @State var points_ui: [Point] = []
     
@@ -28,7 +34,7 @@ struct Figures_Recogniser_UI: View {
     
     let ellipse_classifier = NeuralNetwork(name: "Ellipse", hidden_layers_number: 2)
     
-    var body: some View {
+    public var body: some View {
         let paint_ui = Paint_UI(points: self.$points_ui)
         
         ZStack{
@@ -41,6 +47,7 @@ struct Figures_Recogniser_UI: View {
                     }
                     
                     Button("Clear") {
+                        classification_result = ""
                         paint_ui.points.removeAll()
                     }
                 }
@@ -53,6 +60,7 @@ struct Figures_Recogniser_UI: View {
                 Spacer()
             }
         }
+        .background(background_color)
     }
     
     private func classify(){
@@ -78,14 +86,27 @@ struct Figures_Recogniser_UI: View {
         let P = [noise_p, line_p, triangle_p, rectangle_p, ellipse_p]
         print("P=\(P)")
         
-        let P_SM = Math.softmax(x: P)
+        let P_SM = Num.softmax(x: P)
         print("P_softmax=\(P_SM)")
         let names = ["Noise", "Line", "Triangle", "Rectangle", "Ellipse"]
         
         let indexOfLargest = P_SM.enumerated().max(by: { $0.element < $1.element })!.offset
-        let P_SM_largest = Double(floor(10000*P_SM[indexOfLargest])/10000)
         let Name_largest = names[indexOfLargest]
-        self.classification_result = "\(Name_largest)=\(P_SM_largest)"
+        
+        var P_SM_R = P_SM
+        P_SM_R.remove(at: indexOfLargest)
+        let indexOfSecondLargest = P_SM_R.enumerated().max(by: { $0.element < $1.element })!.offset
+        var names_r = names
+        names_r.remove(at: indexOfLargest)
+        let Name_second_largest = names_r[indexOfSecondLargest]
+        
+        if Num.truncateDouble(value: P_SM[indexOfLargest], toDecimalPlaces: 4) == Num.truncateDouble(value: P_SM_R[indexOfSecondLargest], toDecimalPlaces: 4){
+            self.classification_result = "\(Name_largest) or \(Name_second_largest)"
+        }
+        else{
+            self.classification_result = "\(Name_largest)"
+        }
+        
         print(self.classification_result)
         
         //        self.points_ui.append(contentsOf: normalized_points)

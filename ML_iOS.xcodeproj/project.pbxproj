@@ -7,14 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8517642A2A82C1CE00FAC720 /* Figures_Recogniser_UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851764292A82C1CE00FAC720 /* Figures_Recogniser_UI.swift */; };
-		85618B592A6817EE00A64549 /* ML_watchOS Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 85618B582A6817EE00A64549 /* ML_watchOS Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		85618B5E2A6817EE00A64549 /* ML_watchOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85618B5D2A6817EE00A64549 /* ML_watchOSApp.swift */; };
-		85618B622A6817EF00A64549 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85618B612A6817EF00A64549 /* Assets.xcassets */; };
-		85618B652A6817EF00A64549 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85618B642A6817EF00A64549 /* Preview Assets.xcassets */; };
-		85618B6F2A6817EF00A64549 /* ML_watchOS_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85618B6E2A6817EF00A64549 /* ML_watchOS_Watch_AppTests.swift */; };
-		85618B792A6817EF00A64549 /* ML_watchOS_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85618B782A6817EF00A64549 /* ML_watchOS_Watch_AppUITests.swift */; };
-		85618B7B2A6817EF00A64549 /* ML_watchOS_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85618B7A2A6817EF00A64549 /* ML_watchOS_Watch_AppUITestsLaunchTests.swift */; };
+		852463602A83BB4D006FFEA3 /* ML.h in Headers */ = {isa = PBXBuildFile; fileRef = 8524635F2A83BB4D006FFEA3 /* ML.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		852463662A83BB85006FFEA3 /* LinearRegression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852463652A83BB85006FFEA3 /* LinearRegression.swift */; };
+		8524636D2A83BDA4006FFEA3 /* ML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8524635D2A83BB4D006FFEA3 /* ML.framework */; };
+		8524636E2A83BDA4006FFEA3 /* ML.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8524635D2A83BB4D006FFEA3 /* ML.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		85532B512A83BE00009B86A0 /* Math.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85618B8E2A68187F00A64549 /* Math.framework */; };
+		85532B522A83BE00009B86A0 /* Math.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85618B8E2A68187F00A64549 /* Math.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		85618B922A68187F00A64549 /* Math.docc in Sources */ = {isa = PBXBuildFile; fileRef = 85618B912A68187F00A64549 /* Math.docc */; };
 		85618B982A68187F00A64549 /* Math.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85618B8E2A68187F00A64549 /* Math.framework */; };
 		85618B9F2A68187F00A64549 /* MathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85618B9E2A68187F00A64549 /* MathTests.swift */; };
@@ -29,49 +27,42 @@
 		85618BC72A6818C000A64549 /* Plot.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85618BB12A6818BF00A64549 /* Plot.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		85618BCE2A6818F300A64549 /* Plot2D_UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B989532A67FB7900EC1E8F /* Plot2D_UI.swift */; };
 		85618BCF2A6818F600A64549 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85618B4F2A680C5500A64549 /* Geometry.swift */; };
-		85618BD02A6818FB00A64549 /* ML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B989512A67FB7900EC1E8F /* ML.swift */; };
-		85618BD12A6818FB00A64549 /* LinAlg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B989522A67FB7900EC1E8F /* LinAlg.swift */; };
-		85618BD32A681C0100A64549 /* Regression1_UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85618BD22A681C0100A64549 /* Regression1_UI.swift */; };
-		85618BD92A681CB900A64549 /* Math.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85618B8E2A68187F00A64549 /* Math.framework */; };
-		85618BDA2A681CB900A64549 /* Math.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85618B8E2A68187F00A64549 /* Math.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		85618BDE2A681CBC00A64549 /* Plot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85618BB12A6818BF00A64549 /* Plot.framework */; };
-		85618BDF2A681CBC00A64549 /* Plot.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85618BB12A6818BF00A64549 /* Plot.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		85618BD12A6818FB00A64549 /* Num.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B989522A67FB7900EC1E8F /* Num.swift */; };
 		857D89A72A817D020026909C /* NN in Resources */ = {isa = PBXBuildFile; fileRef = 857D89A62A817D020026909C /* NN */; };
+		858CD6512A83CF4E00FE5BB2 /* FiguresClassifierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CD6502A83CF4E00FE5BB2 /* FiguresClassifierApp.swift */; };
+		858CD6552A83CF4F00FE5BB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 858CD6542A83CF4F00FE5BB2 /* Assets.xcassets */; };
+		858CD6582A83CF4F00FE5BB2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 858CD6572A83CF4F00FE5BB2 /* Preview Assets.xcassets */; };
+		858CD65B2A83CF4F00FE5BB2 /* FiguresClassifier Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 858CD64E2A83CF4E00FE5BB2 /* FiguresClassifier Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		85AE75362A83D201000DA716 /* Math.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85618B8E2A68187F00A64549 /* Math.framework */; };
+		85AE75372A83D201000DA716 /* Math.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85618B8E2A68187F00A64549 /* Math.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		85AE753A2A83D201000DA716 /* Plot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85618BB12A6818BF00A64549 /* Plot.framework */; };
+		85AE753B2A83D201000DA716 /* Plot.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85618BB12A6818BF00A64549 /* Plot.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		85AE753E2A83D22F000DA716 /* Figures_Recogniser_UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F8B2EC2A7422B300717CB5 /* Figures_Recogniser_UI.swift */; };
+		85AE75402A83D232000DA716 /* Figures_Recogniser_UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AE753F2A83D232000DA716 /* Figures_Recogniser_UI.swift */; };
 		85B989262A67FB4C00EC1E8F /* ML_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B989252A67FB4C00EC1E8F /* ML_iOSApp.swift */; };
 		85B9892A2A67FB4C00EC1E8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B989292A67FB4C00EC1E8F /* Assets.xcassets */; };
 		85B9892E2A67FB4C00EC1E8F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B9892D2A67FB4C00EC1E8F /* Preview Assets.xcassets */; };
-		85B989382A67FB4C00EC1E8F /* ML_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B989372A67FB4C00EC1E8F /* ML_iOSTests.swift */; };
-		85B989422A67FB4C00EC1E8F /* ML_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B989412A67FB4C00EC1E8F /* ML_iOSUITests.swift */; };
-		85B989442A67FB4C00EC1E8F /* ML_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B989432A67FB4C00EC1E8F /* ML_iOSUITestsLaunchTests.swift */; };
 		85B989542A67FB7900EC1E8F /* Regression1_UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B989502A67FB7900EC1E8F /* Regression1_UI.swift */; };
 		85F8B2EB2A74219900717CB5 /* Paint_UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F8B2EA2A74219900717CB5 /* Paint_UI.swift */; };
-		85F8B2ED2A7422B300717CB5 /* Figures_Recogniser_UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F8B2EC2A7422B300717CB5 /* Figures_Recogniser_UI.swift */; };
 		A57350B52A7E41CE00FBBE09 /* Neuron.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57350B42A7E41CE00FBBE09 /* Neuron.swift */; };
 		A57350BA2A7E420000FBBE09 /* NeuralNetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57350B92A7E420000FBBE09 /* NeuralNetworkLayer.swift */; };
 		A57350C72A7E9EC300FBBE09 /* NeuralNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57350C62A7E9EC300FBBE09 /* NeuralNetwork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		85618B5A2A6817EE00A64549 /* PBXContainerItemProxy */ = {
+		8524636F2A83BDA4006FFEA3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 85B9891A2A67FB4C00EC1E8F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 85618B572A6817EE00A64549;
-			remoteInfo = "ML_watchOS Watch App";
+			remoteGlobalIDString = 8524635C2A83BB4D006FFEA3;
+			remoteInfo = ML;
 		};
-		85618B6B2A6817EF00A64549 /* PBXContainerItemProxy */ = {
+		85532B532A83BE00009B86A0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 85B9891A2A67FB4C00EC1E8F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 85618B572A6817EE00A64549;
-			remoteInfo = "ML_watchOS Watch App";
-		};
-		85618B752A6817EF00A64549 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 85B9891A2A67FB4C00EC1E8F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 85618B572A6817EE00A64549;
-			remoteInfo = "ML_watchOS Watch App";
+			remoteGlobalIDString = 85618B8D2A68187F00A64549;
+			remoteInfo = Math;
 		};
 		85618B992A68187F00A64549 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -115,46 +106,39 @@
 			remoteGlobalIDString = 85618BB02A6818BF00A64549;
 			remoteInfo = Plot;
 		};
-		85618BDB2A681CB900A64549 /* PBXContainerItemProxy */ = {
+		858CD6592A83CF4F00FE5BB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85B9891A2A67FB4C00EC1E8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 858CD64D2A83CF4E00FE5BB2;
+			remoteInfo = "FiguresClassifier Watch App";
+		};
+		85AE75382A83D201000DA716 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 85B9891A2A67FB4C00EC1E8F /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 85618B8D2A68187F00A64549;
 			remoteInfo = Math;
 		};
-		85618BE02A681CBC00A64549 /* PBXContainerItemProxy */ = {
+		85AE753C2A83D201000DA716 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 85B9891A2A67FB4C00EC1E8F /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 85618BB02A6818BF00A64549;
 			remoteInfo = Plot;
 		};
-		85B989342A67FB4C00EC1E8F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 85B9891A2A67FB4C00EC1E8F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 85B989212A67FB4C00EC1E8F;
-			remoteInfo = ML_iOS;
-		};
-		85B9893E2A67FB4C00EC1E8F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 85B9891A2A67FB4C00EC1E8F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 85B989212A67FB4C00EC1E8F;
-			remoteInfo = ML_iOS;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		85618B7F2A6817EF00A64549 /* Embed Watch Content */ = {
+		85532B552A83BE00009B86A0 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
+			dstPath = "";
+			dstSubfolderSpec = 10;
 			files = (
-				85618B592A6817EE00A64549 /* ML_watchOS Watch App.app in Embed Watch Content */,
+				85532B522A83BE00009B86A0 /* Math.framework in Embed Frameworks */,
 			);
-			name = "Embed Watch Content";
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		85618BA82A68187F00A64549 /* Embed Frameworks */ = {
@@ -163,20 +147,32 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				8524636E2A83BDA4006FFEA3 /* ML.framework in Embed Frameworks */,
 				85618BA42A68187F00A64549 /* Math.framework in Embed Frameworks */,
 				85618BC72A6818C000A64549 /* Plot.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		85618BDD2A681CB900A64549 /* Embed Frameworks */ = {
+		858CD65F2A83CF4F00FE5BB2 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				858CD65B2A83CF4F00FE5BB2 /* FiguresClassifier Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		858CD6642A83D03600FE5BB2 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				85618BDA2A681CB900A64549 /* Math.framework in Embed Frameworks */,
-				85618BDF2A681CBC00A64549 /* Plot.framework in Embed Frameworks */,
+				85AE753B2A83D201000DA716 /* Plot.framework in Embed Frameworks */,
+				85AE75372A83D201000DA716 /* Math.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,18 +180,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		851764292A82C1CE00FAC720 /* Figures_Recogniser_UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Figures_Recogniser_UI.swift; sourceTree = "<group>"; };
+		8524635D2A83BB4D006FFEA3 /* ML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8524635F2A83BB4D006FFEA3 /* ML.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ML.h; sourceTree = "<group>"; };
+		852463652A83BB85006FFEA3 /* LinearRegression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearRegression.swift; sourceTree = "<group>"; };
 		85618B4F2A680C5500A64549 /* Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
-		85618B532A6817EE00A64549 /* ML_watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ML_watchOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		85618B582A6817EE00A64549 /* ML_watchOS Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ML_watchOS Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		85618B5D2A6817EE00A64549 /* ML_watchOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ML_watchOSApp.swift; sourceTree = "<group>"; };
-		85618B612A6817EF00A64549 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		85618B642A6817EF00A64549 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		85618B6A2A6817EF00A64549 /* ML_watchOS Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ML_watchOS Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		85618B6E2A6817EF00A64549 /* ML_watchOS_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ML_watchOS_Watch_AppTests.swift; sourceTree = "<group>"; };
-		85618B742A6817EF00A64549 /* ML_watchOS Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ML_watchOS Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		85618B782A6817EF00A64549 /* ML_watchOS_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ML_watchOS_Watch_AppUITests.swift; sourceTree = "<group>"; };
-		85618B7A2A6817EF00A64549 /* ML_watchOS_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ML_watchOS_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		85618B8E2A68187F00A64549 /* Math.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Math.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85618B902A68187F00A64549 /* Math.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Math.h; sourceTree = "<group>"; };
 		85618B912A68187F00A64549 /* Math.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Math.docc; sourceTree = "<group>"; };
@@ -206,21 +194,19 @@
 		85618BB42A6818BF00A64549 /* Plot.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Plot.docc; sourceTree = "<group>"; };
 		85618BBA2A6818BF00A64549 /* PlotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85618BC12A6818C000A64549 /* PlotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotTests.swift; sourceTree = "<group>"; };
-		85618BD22A681C0100A64549 /* Regression1_UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regression1_UI.swift; sourceTree = "<group>"; };
 		857D89A62A817D020026909C /* NN */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NN; sourceTree = SOURCE_ROOT; };
+		858CD64E2A83CF4E00FE5BB2 /* FiguresClassifier Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FiguresClassifier Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		858CD6502A83CF4E00FE5BB2 /* FiguresClassifierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiguresClassifierApp.swift; sourceTree = "<group>"; };
+		858CD6542A83CF4F00FE5BB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		858CD6572A83CF4F00FE5BB2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		85AE753F2A83D232000DA716 /* Figures_Recogniser_UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Figures_Recogniser_UI.swift; sourceTree = "<group>"; };
 		85B989222A67FB4C00EC1E8F /* ML_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ML_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85B989252A67FB4C00EC1E8F /* ML_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ML_iOSApp.swift; sourceTree = "<group>"; };
 		85B989292A67FB4C00EC1E8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85B9892B2A67FB4C00EC1E8F /* ML_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ML_iOS.entitlements; sourceTree = "<group>"; };
 		85B9892D2A67FB4C00EC1E8F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		85B989332A67FB4C00EC1E8F /* ML_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ML_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		85B989372A67FB4C00EC1E8F /* ML_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ML_iOSTests.swift; sourceTree = "<group>"; };
-		85B9893D2A67FB4C00EC1E8F /* ML_iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ML_iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		85B989412A67FB4C00EC1E8F /* ML_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ML_iOSUITests.swift; sourceTree = "<group>"; };
-		85B989432A67FB4C00EC1E8F /* ML_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ML_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		85B989502A67FB7900EC1E8F /* Regression1_UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regression1_UI.swift; sourceTree = "<group>"; };
-		85B989512A67FB7900EC1E8F /* ML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ML.swift; sourceTree = "<group>"; };
-		85B989522A67FB7900EC1E8F /* LinAlg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinAlg.swift; sourceTree = "<group>"; };
+		85B989522A67FB7900EC1E8F /* Num.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Num.swift; sourceTree = "<group>"; };
 		85B989532A67FB7900EC1E8F /* Plot2D_UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plot2D_UI.swift; sourceTree = "<group>"; };
 		85F8B2EA2A74219900717CB5 /* Paint_UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paint_UI.swift; sourceTree = "<group>"; };
 		85F8B2EC2A7422B300717CB5 /* Figures_Recogniser_UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Figures_Recogniser_UI.swift; sourceTree = "<group>"; };
@@ -230,26 +216,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		85618B552A6817EE00A64549 /* Frameworks */ = {
+		8524635A2A83BB4D006FFEA3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85618BD92A681CB900A64549 /* Math.framework in Frameworks */,
-				85618BDE2A681CBC00A64549 /* Plot.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		85618B672A6817EF00A64549 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		85618B712A6817EF00A64549 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				85532B512A83BE00009B86A0 /* Math.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,84 +254,68 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		858CD64B2A83CF4E00FE5BB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85AE753A2A83D201000DA716 /* Plot.framework in Frameworks */,
+				85AE75362A83D201000DA716 /* Math.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		85B9891F2A67FB4C00EC1E8F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8524636D2A83BDA4006FFEA3 /* ML.framework in Frameworks */,
 				85618BA32A68187F00A64549 /* Math.framework in Frameworks */,
 				85618BC62A6818C000A64549 /* Plot.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		85B989302A67FB4C00EC1E8F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		85B9893A2A67FB4C00EC1E8F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		85618B4E2A6802B200A64549 /* View */ = {
+		8524635E2A83BB4D006FFEA3 /* ML */ = {
+			isa = PBXGroup;
+			children = (
+				852463682A83BD49006FFEA3 /* UI */,
+				852463672A83BD3E006FFEA3 /* Model */,
+				8524635F2A83BB4D006FFEA3 /* ML.h */,
+			);
+			path = ML;
+			sourceTree = "<group>";
+		};
+		852463642A83BB79006FFEA3 /* Regression */ = {
+			isa = PBXGroup;
+			children = (
+				852463652A83BB85006FFEA3 /* LinearRegression.swift */,
+			);
+			path = Regression;
+			sourceTree = "<group>";
+		};
+		852463672A83BD3E006FFEA3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A57350A62A7E3A7500FBBE09 /* NeuralNetwork */,
+				852463642A83BB79006FFEA3 /* Regression */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		852463682A83BD49006FFEA3 /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				85B989502A67FB7900EC1E8F /* Regression1_UI.swift */,
-				85F8B2EC2A7422B300717CB5 /* Figures_Recogniser_UI.swift */,
+				85AE753F2A83D232000DA716 /* Figures_Recogniser_UI.swift */,
 			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		85618B5C2A6817EE00A64549 /* ML_watchOS Watch App */ = {
-			isa = PBXGroup;
-			children = (
-				85618BD22A681C0100A64549 /* Regression1_UI.swift */,
-				85618B5D2A6817EE00A64549 /* ML_watchOSApp.swift */,
-				85618B612A6817EF00A64549 /* Assets.xcassets */,
-				85618B632A6817EF00A64549 /* Preview Content */,
-				851764292A82C1CE00FAC720 /* Figures_Recogniser_UI.swift */,
-			);
-			path = "ML_watchOS Watch App";
-			sourceTree = "<group>";
-		};
-		85618B632A6817EF00A64549 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				85618B642A6817EF00A64549 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		85618B6D2A6817EF00A64549 /* ML_watchOS Watch AppTests */ = {
-			isa = PBXGroup;
-			children = (
-				85618B6E2A6817EF00A64549 /* ML_watchOS_Watch_AppTests.swift */,
-			);
-			path = "ML_watchOS Watch AppTests";
-			sourceTree = "<group>";
-		};
-		85618B772A6817EF00A64549 /* ML_watchOS Watch AppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				85618B782A6817EF00A64549 /* ML_watchOS_Watch_AppUITests.swift */,
-				85618B7A2A6817EF00A64549 /* ML_watchOS_Watch_AppUITestsLaunchTests.swift */,
-			);
-			path = "ML_watchOS Watch AppUITests";
+			path = UI;
 			sourceTree = "<group>";
 		};
 		85618B8F2A68187F00A64549 /* Math */ = {
 			isa = PBXGroup;
 			children = (
-				A57350A62A7E3A7500FBBE09 /* NeuralNetwork */,
-				85B989512A67FB7900EC1E8F /* ML.swift */,
-				85B989522A67FB7900EC1E8F /* LinAlg.swift */,
+				85B989522A67FB7900EC1E8F /* Num.swift */,
 				85618B902A68187F00A64549 /* Math.h */,
 				85618B912A68187F00A64549 /* Math.docc */,
 			);
@@ -402,20 +357,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		858CD64F2A83CF4E00FE5BB2 /* FiguresClassifier Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				85F8B2EC2A7422B300717CB5 /* Figures_Recogniser_UI.swift */,
+				858CD6502A83CF4E00FE5BB2 /* FiguresClassifierApp.swift */,
+				858CD6542A83CF4F00FE5BB2 /* Assets.xcassets */,
+				858CD6562A83CF4F00FE5BB2 /* Preview Content */,
+			);
+			path = "FiguresClassifier Watch App";
+			sourceTree = "<group>";
+		};
+		858CD6562A83CF4F00FE5BB2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				858CD6572A83CF4F00FE5BB2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		85B989192A67FB4C00EC1E8F = {
 			isa = PBXGroup;
 			children = (
 				857D89A62A817D020026909C /* NN */,
 				85B989242A67FB4C00EC1E8F /* ML_iOS */,
-				85B989362A67FB4C00EC1E8F /* ML_iOSTests */,
-				85B989402A67FB4C00EC1E8F /* ML_iOSUITests */,
-				85618B5C2A6817EE00A64549 /* ML_watchOS Watch App */,
-				85618B6D2A6817EF00A64549 /* ML_watchOS Watch AppTests */,
-				85618B772A6817EF00A64549 /* ML_watchOS Watch AppUITests */,
 				85618B8F2A68187F00A64549 /* Math */,
 				85618B9D2A68187F00A64549 /* MathTests */,
 				85618BB22A6818BF00A64549 /* Plot */,
 				85618BC02A6818C000A64549 /* PlotTests */,
+				8524635E2A83BB4D006FFEA3 /* ML */,
+				858CD64F2A83CF4E00FE5BB2 /* FiguresClassifier Watch App */,
 				85B989232A67FB4C00EC1E8F /* Products */,
 				85618BD82A681CB900A64549 /* Frameworks */,
 			);
@@ -425,16 +396,12 @@
 			isa = PBXGroup;
 			children = (
 				85B989222A67FB4C00EC1E8F /* ML_iOS.app */,
-				85B989332A67FB4C00EC1E8F /* ML_iOSTests.xctest */,
-				85B9893D2A67FB4C00EC1E8F /* ML_iOSUITests.xctest */,
-				85618B532A6817EE00A64549 /* ML_watchOS.app */,
-				85618B582A6817EE00A64549 /* ML_watchOS Watch App.app */,
-				85618B6A2A6817EF00A64549 /* ML_watchOS Watch AppTests.xctest */,
-				85618B742A6817EF00A64549 /* ML_watchOS Watch AppUITests.xctest */,
 				85618B8E2A68187F00A64549 /* Math.framework */,
 				85618B972A68187F00A64549 /* MathTests.xctest */,
 				85618BB12A6818BF00A64549 /* Plot.framework */,
 				85618BBA2A6818BF00A64549 /* PlotTests.xctest */,
+				8524635D2A83BB4D006FFEA3 /* ML.framework */,
+				858CD64E2A83CF4E00FE5BB2 /* FiguresClassifier Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -443,7 +410,6 @@
 			isa = PBXGroup;
 			children = (
 				85B989252A67FB4C00EC1E8F /* ML_iOSApp.swift */,
-				85618B4E2A6802B200A64549 /* View */,
 				85B989292A67FB4C00EC1E8F /* Assets.xcassets */,
 				85B9892B2A67FB4C00EC1E8F /* ML_iOS.entitlements */,
 				85B9892C2A67FB4C00EC1E8F /* Preview Content */,
@@ -459,23 +425,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		85B989362A67FB4C00EC1E8F /* ML_iOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				85B989372A67FB4C00EC1E8F /* ML_iOSTests.swift */,
-			);
-			path = ML_iOSTests;
-			sourceTree = "<group>";
-		};
-		85B989402A67FB4C00EC1E8F /* ML_iOSUITests */ = {
-			isa = PBXGroup;
-			children = (
-				85B989412A67FB4C00EC1E8F /* ML_iOSUITests.swift */,
-				85B989432A67FB4C00EC1E8F /* ML_iOSUITestsLaunchTests.swift */,
-			);
-			path = ML_iOSUITests;
-			sourceTree = "<group>";
-		};
 		A57350A62A7E3A7500FBBE09 /* NeuralNetwork */ = {
 			isa = PBXGroup;
 			children = (
@@ -489,6 +438,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		852463582A83BB4D006FFEA3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				852463602A83BB4D006FFEA3 /* ML.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		85618B892A68187F00A64549 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -508,78 +465,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		85618B522A6817EE00A64549 /* ML_watchOS */ = {
+		8524635C2A83BB4D006FFEA3 /* ML */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 85618B802A6817EF00A64549 /* Build configuration list for PBXNativeTarget "ML_watchOS" */;
+			buildConfigurationList = 852463612A83BB4D006FFEA3 /* Build configuration list for PBXNativeTarget "ML" */;
 			buildPhases = (
-				85618B512A6817EE00A64549 /* Resources */,
-				85618B7F2A6817EF00A64549 /* Embed Watch Content */,
+				852463582A83BB4D006FFEA3 /* Headers */,
+				852463592A83BB4D006FFEA3 /* Sources */,
+				8524635A2A83BB4D006FFEA3 /* Frameworks */,
+				8524635B2A83BB4D006FFEA3 /* Resources */,
+				85532B552A83BE00009B86A0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				85618B5B2A6817EE00A64549 /* PBXTargetDependency */,
+				85532B542A83BE00009B86A0 /* PBXTargetDependency */,
 			);
-			name = ML_watchOS;
-			productName = ML_watchOS;
-			productReference = 85618B532A6817EE00A64549 /* ML_watchOS.app */;
-			productType = "com.apple.product-type.application.watchapp2-container";
-		};
-		85618B572A6817EE00A64549 /* ML_watchOS Watch App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 85618B7C2A6817EF00A64549 /* Build configuration list for PBXNativeTarget "ML_watchOS Watch App" */;
-			buildPhases = (
-				85618B542A6817EE00A64549 /* Sources */,
-				85618B552A6817EE00A64549 /* Frameworks */,
-				85618B562A6817EE00A64549 /* Resources */,
-				85618BDD2A681CB900A64549 /* Embed Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				85618BDC2A681CB900A64549 /* PBXTargetDependency */,
-				85618BE12A681CBC00A64549 /* PBXTargetDependency */,
-			);
-			name = "ML_watchOS Watch App";
-			productName = "ML_watchOS Watch App";
-			productReference = 85618B582A6817EE00A64549 /* ML_watchOS Watch App.app */;
-			productType = "com.apple.product-type.application";
-		};
-		85618B692A6817EF00A64549 /* ML_watchOS Watch AppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 85618B832A6817EF00A64549 /* Build configuration list for PBXNativeTarget "ML_watchOS Watch AppTests" */;
-			buildPhases = (
-				85618B662A6817EF00A64549 /* Sources */,
-				85618B672A6817EF00A64549 /* Frameworks */,
-				85618B682A6817EF00A64549 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				85618B6C2A6817EF00A64549 /* PBXTargetDependency */,
-			);
-			name = "ML_watchOS Watch AppTests";
-			productName = "ML_watchOS Watch AppTests";
-			productReference = 85618B6A2A6817EF00A64549 /* ML_watchOS Watch AppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		85618B732A6817EF00A64549 /* ML_watchOS Watch AppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 85618B862A6817EF00A64549 /* Build configuration list for PBXNativeTarget "ML_watchOS Watch AppUITests" */;
-			buildPhases = (
-				85618B702A6817EF00A64549 /* Sources */,
-				85618B712A6817EF00A64549 /* Frameworks */,
-				85618B722A6817EF00A64549 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				85618B762A6817EF00A64549 /* PBXTargetDependency */,
-			);
-			name = "ML_watchOS Watch AppUITests";
-			productName = "ML_watchOS Watch AppUITests";
-			productReference = 85618B742A6817EF00A64549 /* ML_watchOS Watch AppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
+			name = ML;
+			productName = ML;
+			productReference = 8524635D2A83BB4D006FFEA3 /* ML.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		85618B8D2A68187F00A64549 /* Math */ = {
 			isa = PBXNativeTarget;
@@ -655,6 +559,26 @@
 			productReference = 85618BBA2A6818BF00A64549 /* PlotTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		858CD64D2A83CF4E00FE5BB2 /* FiguresClassifier Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 858CD65C2A83CF4F00FE5BB2 /* Build configuration list for PBXNativeTarget "FiguresClassifier Watch App" */;
+			buildPhases = (
+				858CD64A2A83CF4E00FE5BB2 /* Sources */,
+				858CD64B2A83CF4E00FE5BB2 /* Frameworks */,
+				858CD64C2A83CF4E00FE5BB2 /* Resources */,
+				858CD6642A83D03600FE5BB2 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				85AE75392A83D201000DA716 /* PBXTargetDependency */,
+				85AE753D2A83D201000DA716 /* PBXTargetDependency */,
+			);
+			name = "FiguresClassifier Watch App";
+			productName = "FiguresClassifier Watch App";
+			productReference = 858CD64E2A83CF4E00FE5BB2 /* FiguresClassifier Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 		85B989212A67FB4C00EC1E8F /* ML_iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85B989472A67FB4C00EC1E8F /* Build configuration list for PBXNativeTarget "ML_iOS" */;
@@ -663,53 +587,20 @@
 				85B9891F2A67FB4C00EC1E8F /* Frameworks */,
 				85B989202A67FB4C00EC1E8F /* Resources */,
 				85618BA82A68187F00A64549 /* Embed Frameworks */,
+				858CD65F2A83CF4F00FE5BB2 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				85618BA22A68187F00A64549 /* PBXTargetDependency */,
 				85618BC52A6818C000A64549 /* PBXTargetDependency */,
+				852463702A83BDA4006FFEA3 /* PBXTargetDependency */,
+				858CD65A2A83CF4F00FE5BB2 /* PBXTargetDependency */,
 			);
 			name = ML_iOS;
 			productName = ML_iOS;
 			productReference = 85B989222A67FB4C00EC1E8F /* ML_iOS.app */;
 			productType = "com.apple.product-type.application";
-		};
-		85B989322A67FB4C00EC1E8F /* ML_iOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 85B9894A2A67FB4C00EC1E8F /* Build configuration list for PBXNativeTarget "ML_iOSTests" */;
-			buildPhases = (
-				85B9892F2A67FB4C00EC1E8F /* Sources */,
-				85B989302A67FB4C00EC1E8F /* Frameworks */,
-				85B989312A67FB4C00EC1E8F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				85B989352A67FB4C00EC1E8F /* PBXTargetDependency */,
-			);
-			name = ML_iOSTests;
-			productName = ML_iOSTests;
-			productReference = 85B989332A67FB4C00EC1E8F /* ML_iOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		85B9893C2A67FB4C00EC1E8F /* ML_iOSUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 85B9894D2A67FB4C00EC1E8F /* Build configuration list for PBXNativeTarget "ML_iOSUITests" */;
-			buildPhases = (
-				85B989392A67FB4C00EC1E8F /* Sources */,
-				85B9893A2A67FB4C00EC1E8F /* Frameworks */,
-				85B9893B2A67FB4C00EC1E8F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				85B9893F2A67FB4C00EC1E8F /* PBXTargetDependency */,
-			);
-			name = ML_iOSUITests;
-			productName = ML_iOSUITests;
-			productReference = 85B9893D2A67FB4C00EC1E8F /* ML_iOSUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -721,19 +612,9 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					85618B522A6817EE00A64549 = {
+					8524635C2A83BB4D006FFEA3 = {
 						CreatedOnToolsVersion = 14.3.1;
-					};
-					85618B572A6817EE00A64549 = {
-						CreatedOnToolsVersion = 14.3.1;
-					};
-					85618B692A6817EF00A64549 = {
-						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = 85618B572A6817EE00A64549;
-					};
-					85618B732A6817EF00A64549 = {
-						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = 85618B572A6817EE00A64549;
+						LastSwiftMigration = 1430;
 					};
 					85618B8D2A68187F00A64549 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -749,16 +630,11 @@
 						CreatedOnToolsVersion = 14.3.1;
 						TestTargetID = 85B989212A67FB4C00EC1E8F;
 					};
+					858CD64D2A83CF4E00FE5BB2 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
 					85B989212A67FB4C00EC1E8F = {
 						CreatedOnToolsVersion = 14.3.1;
-					};
-					85B989322A67FB4C00EC1E8F = {
-						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = 85B989212A67FB4C00EC1E8F;
-					};
-					85B9893C2A67FB4C00EC1E8F = {
-						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = 85B989212A67FB4C00EC1E8F;
 					};
 				};
 			};
@@ -776,45 +652,18 @@
 			projectRoot = "";
 			targets = (
 				85B989212A67FB4C00EC1E8F /* ML_iOS */,
-				85B989322A67FB4C00EC1E8F /* ML_iOSTests */,
-				85B9893C2A67FB4C00EC1E8F /* ML_iOSUITests */,
-				85618B522A6817EE00A64549 /* ML_watchOS */,
-				85618B572A6817EE00A64549 /* ML_watchOS Watch App */,
-				85618B692A6817EF00A64549 /* ML_watchOS Watch AppTests */,
-				85618B732A6817EF00A64549 /* ML_watchOS Watch AppUITests */,
 				85618B8D2A68187F00A64549 /* Math */,
 				85618B962A68187F00A64549 /* MathTests */,
 				85618BB02A6818BF00A64549 /* Plot */,
 				85618BB92A6818BF00A64549 /* PlotTests */,
+				8524635C2A83BB4D006FFEA3 /* ML */,
+				858CD64D2A83CF4E00FE5BB2 /* FiguresClassifier Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		85618B512A6817EE00A64549 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		85618B562A6817EE00A64549 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				85618B652A6817EF00A64549 /* Preview Assets.xcassets in Resources */,
-				85618B622A6817EF00A64549 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		85618B682A6817EF00A64549 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		85618B722A6817EF00A64549 /* Resources */ = {
+		8524635B2A83BB4D006FFEA3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -850,6 +699,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		858CD64C2A83CF4E00FE5BB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				858CD6582A83CF4F00FE5BB2 /* Preview Assets.xcassets in Resources */,
+				858CD6552A83CF4F00FE5BB2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		85B989202A67FB4C00EC1E8F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -859,47 +717,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		85B989312A67FB4C00EC1E8F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		85B9893B2A67FB4C00EC1E8F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		85618B542A6817EE00A64549 /* Sources */ = {
+		852463592A83BB4D006FFEA3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8517642A2A82C1CE00FAC720 /* Figures_Recogniser_UI.swift in Sources */,
-				85618BD32A681C0100A64549 /* Regression1_UI.swift in Sources */,
-				85618B5E2A6817EE00A64549 /* ML_watchOSApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		85618B662A6817EF00A64549 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				85618B6F2A6817EF00A64549 /* ML_watchOS_Watch_AppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		85618B702A6817EF00A64549 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				85618B792A6817EF00A64549 /* ML_watchOS_Watch_AppUITests.swift in Sources */,
-				85618B7B2A6817EF00A64549 /* ML_watchOS_Watch_AppUITestsLaunchTests.swift in Sources */,
+				852463662A83BB85006FFEA3 /* LinearRegression.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -907,8 +732,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85618BD12A6818FB00A64549 /* LinAlg.swift in Sources */,
-				85618BD02A6818FB00A64549 /* ML.swift in Sources */,
+				85618BD12A6818FB00A64549 /* Num.swift in Sources */,
 				85618B922A68187F00A64549 /* Math.docc in Sources */,
 				A57350BA2A7E420000FBBE09 /* NeuralNetworkLayer.swift in Sources */,
 				A57350C72A7E9EC300FBBE09 /* NeuralNetwork.swift in Sources */,
@@ -943,50 +767,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		858CD64A2A83CF4E00FE5BB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85AE753E2A83D22F000DA716 /* Figures_Recogniser_UI.swift in Sources */,
+				858CD6512A83CF4E00FE5BB2 /* FiguresClassifierApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		85B9891E2A67FB4C00EC1E8F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85F8B2ED2A7422B300717CB5 /* Figures_Recogniser_UI.swift in Sources */,
+				85AE75402A83D232000DA716 /* Figures_Recogniser_UI.swift in Sources */,
 				85B989542A67FB7900EC1E8F /* Regression1_UI.swift in Sources */,
 				85B989262A67FB4C00EC1E8F /* ML_iOSApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		85B9892F2A67FB4C00EC1E8F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				85B989382A67FB4C00EC1E8F /* ML_iOSTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		85B989392A67FB4C00EC1E8F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				85B989422A67FB4C00EC1E8F /* ML_iOSUITests.swift in Sources */,
-				85B989442A67FB4C00EC1E8F /* ML_iOSUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		85618B5B2A6817EE00A64549 /* PBXTargetDependency */ = {
+		852463702A83BDA4006FFEA3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 85618B572A6817EE00A64549 /* ML_watchOS Watch App */;
-			targetProxy = 85618B5A2A6817EE00A64549 /* PBXContainerItemProxy */;
+			target = 8524635C2A83BB4D006FFEA3 /* ML */;
+			targetProxy = 8524636F2A83BDA4006FFEA3 /* PBXContainerItemProxy */;
 		};
-		85618B6C2A6817EF00A64549 /* PBXTargetDependency */ = {
+		85532B542A83BE00009B86A0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 85618B572A6817EE00A64549 /* ML_watchOS Watch App */;
-			targetProxy = 85618B6B2A6817EF00A64549 /* PBXContainerItemProxy */;
-		};
-		85618B762A6817EF00A64549 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 85618B572A6817EE00A64549 /* ML_watchOS Watch App */;
-			targetProxy = 85618B752A6817EF00A64549 /* PBXContainerItemProxy */;
+			target = 85618B8D2A68187F00A64549 /* Math */;
+			targetProxy = 85532B532A83BE00009B86A0 /* PBXContainerItemProxy */;
 		};
 		85618B9A2A68187F00A64549 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1018,211 +829,100 @@
 			target = 85618BB02A6818BF00A64549 /* Plot */;
 			targetProxy = 85618BC42A6818C000A64549 /* PBXContainerItemProxy */;
 		};
-		85618BDC2A681CB900A64549 /* PBXTargetDependency */ = {
+		858CD65A2A83CF4F00FE5BB2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 858CD64D2A83CF4E00FE5BB2 /* FiguresClassifier Watch App */;
+			targetProxy = 858CD6592A83CF4F00FE5BB2 /* PBXContainerItemProxy */;
+		};
+		85AE75392A83D201000DA716 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 85618B8D2A68187F00A64549 /* Math */;
-			targetProxy = 85618BDB2A681CB900A64549 /* PBXContainerItemProxy */;
+			targetProxy = 85AE75382A83D201000DA716 /* PBXContainerItemProxy */;
 		};
-		85618BE12A681CBC00A64549 /* PBXTargetDependency */ = {
+		85AE753D2A83D201000DA716 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 85618BB02A6818BF00A64549 /* Plot */;
-			targetProxy = 85618BE02A681CBC00A64549 /* PBXContainerItemProxy */;
-		};
-		85B989352A67FB4C00EC1E8F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 85B989212A67FB4C00EC1E8F /* ML_iOS */;
-			targetProxy = 85B989342A67FB4C00EC1E8F /* PBXContainerItemProxy */;
-		};
-		85B9893F2A67FB4C00EC1E8F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 85B989212A67FB4C00EC1E8F /* ML_iOS */;
-			targetProxy = 85B9893E2A67FB4C00EC1E8F /* PBXContainerItemProxy */;
+			targetProxy = 85AE753C2A83D201000DA716 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		85618B7D2A6817EF00A64549 /* Debug */ = {
+		852463622A83BB4D006FFEA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ML_watchOS Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = UA5WR73PS4;
-				ENABLE_PREVIEWS = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = ML_watchOS;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKWatchOnly = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "DaniilIgnatev.ML-watchOS.watchkitapp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = DaniilIgnatev.ML;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx watchos watchsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
+				TARGETED_DEVICE_FAMILY = "1,2,4";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 				WATCHOS_DEPLOYMENT_TARGET = 9.4;
 			};
 			name = Debug;
 		};
-		85618B7E2A6817EF00A64549 /* Release */ = {
+		852463632A83BB4D006FFEA3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ML_watchOS Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = UA5WR73PS4;
-				ENABLE_PREVIEWS = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = ML_watchOS;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKWatchOnly = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "DaniilIgnatev.ML-watchOS.watchkitapp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = DaniilIgnatev.ML;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx watchos watchsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
+				TARGETED_DEVICE_FAMILY = "1,2,4";
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 9.4;
-			};
-			name = Release;
-		};
-		85618B812A6817EF00A64549 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UA5WR73PS4;
-				INFOPLIST_KEY_CFBundleDisplayName = ML_watchOS;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "DaniilIgnatev.ML-watchOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator watchos watchsimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,4";
-			};
-			name = Debug;
-		};
-		85618B822A6817EF00A64549 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UA5WR73PS4;
-				INFOPLIST_KEY_CFBundleDisplayName = ML_watchOS;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "DaniilIgnatev.ML-watchOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator watchos watchsimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,4";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		85618B842A6817EF00A64549 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UA5WR73PS4;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "DaniilIgnatev.ML-watchOS-Watch-AppTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ML_watchOS Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ML_watchOS Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 9.4;
-			};
-			name = Debug;
-		};
-		85618B852A6817EF00A64549 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UA5WR73PS4;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "DaniilIgnatev.ML-watchOS-Watch-AppTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ML_watchOS Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ML_watchOS Watch App";
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 9.4;
-			};
-			name = Release;
-		};
-		85618B872A6817EF00A64549 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UA5WR73PS4;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "DaniilIgnatev.ML-watchOS-Watch-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "ML_watchOS Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 9.4;
-			};
-			name = Debug;
-		};
-		85618B882A6817EF00A64549 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UA5WR73PS4;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "DaniilIgnatev.ML-watchOS-Watch-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "ML_watchOS Watch App";
-				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 				WATCHOS_DEPLOYMENT_TARGET = 9.4;
 			};
 			name = Release;
@@ -1234,7 +934,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = UA5WR73PS4;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1277,7 +977,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = UA5WR73PS4;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1319,7 +1019,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UA5WR73PS4;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -1343,7 +1043,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UA5WR73PS4;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -1368,7 +1068,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = UA5WR73PS4;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1411,7 +1111,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = UA5WR73PS4;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1453,7 +1153,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UA5WR73PS4;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -1475,7 +1175,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UA5WR73PS4;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -1488,6 +1188,67 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ML_iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ML_iOS";
+			};
+			name = Release;
+		};
+		858CD65D2A83CF4F00FE5BB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FiguresClassifier Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = UA5WR73PS4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FiguresClassifier;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "DaniilIgnatev.ML-iOS";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "DaniilIgnatev.ML-iOS.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Debug;
+		};
+		858CD65E2A83CF4F00FE5BB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FiguresClassifier Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = UA5WR73PS4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FiguresClassifier;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "DaniilIgnatev.ML-iOS";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "DaniilIgnatev.ML-iOS.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
 			};
 			name = Release;
 		};
@@ -1678,131 +1439,14 @@
 			};
 			name = Release;
 		};
-		85B9894B2A67FB4C00EC1E8F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UA5WR73PS4;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "DaniilIgnatev.ML-iOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ML_iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ML_iOS";
-			};
-			name = Debug;
-		};
-		85B9894C2A67FB4C00EC1E8F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UA5WR73PS4;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "DaniilIgnatev.ML-iOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ML_iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ML_iOS";
-			};
-			name = Release;
-		};
-		85B9894E2A67FB4C00EC1E8F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UA5WR73PS4;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "DaniilIgnatev.ML-iOSUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ML_iOS;
-			};
-			name = Debug;
-		};
-		85B9894F2A67FB4C00EC1E8F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UA5WR73PS4;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "DaniilIgnatev.ML-iOSUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ML_iOS;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		85618B7C2A6817EF00A64549 /* Build configuration list for PBXNativeTarget "ML_watchOS Watch App" */ = {
+		852463612A83BB4D006FFEA3 /* Build configuration list for PBXNativeTarget "ML" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				85618B7D2A6817EF00A64549 /* Debug */,
-				85618B7E2A6817EF00A64549 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		85618B802A6817EF00A64549 /* Build configuration list for PBXNativeTarget "ML_watchOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				85618B812A6817EF00A64549 /* Debug */,
-				85618B822A6817EF00A64549 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		85618B832A6817EF00A64549 /* Build configuration list for PBXNativeTarget "ML_watchOS Watch AppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				85618B842A6817EF00A64549 /* Debug */,
-				85618B852A6817EF00A64549 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		85618B862A6817EF00A64549 /* Build configuration list for PBXNativeTarget "ML_watchOS Watch AppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				85618B872A6817EF00A64549 /* Debug */,
-				85618B882A6817EF00A64549 /* Release */,
+				852463622A83BB4D006FFEA3 /* Debug */,
+				852463632A83BB4D006FFEA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1843,6 +1487,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		858CD65C2A83CF4F00FE5BB2 /* Build configuration list for PBXNativeTarget "FiguresClassifier Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				858CD65D2A83CF4F00FE5BB2 /* Debug */,
+				858CD65E2A83CF4F00FE5BB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		85B9891D2A67FB4C00EC1E8F /* Build configuration list for PBXProject "ML_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1857,24 +1510,6 @@
 			buildConfigurations = (
 				85B989482A67FB4C00EC1E8F /* Debug */,
 				85B989492A67FB4C00EC1E8F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		85B9894A2A67FB4C00EC1E8F /* Build configuration list for PBXNativeTarget "ML_iOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				85B9894B2A67FB4C00EC1E8F /* Debug */,
-				85B9894C2A67FB4C00EC1E8F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		85B9894D2A67FB4C00EC1E8F /* Build configuration list for PBXNativeTarget "ML_iOSUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				85B9894E2A67FB4C00EC1E8F /* Debug */,
-				85B9894F2A67FB4C00EC1E8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

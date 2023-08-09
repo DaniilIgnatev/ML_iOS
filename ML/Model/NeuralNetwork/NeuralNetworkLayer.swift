@@ -19,8 +19,8 @@ public class NeuralNetworkLayer {
     init(root_path: String, index: Int){
         self.index = index
         
-        let W = LinAlg.readMatrix(name: "W", type: "txt", directory: root_path)
-        let B = LinAlg.readArray(name: "B", type: "txt", directory: root_path)
+        let W = Num.readMatrix(name: "W", type: "txt", directory: root_path)
+        let B = Num.readArray(name: "B", type: "txt", directory: root_path)
         
         self.neurons = NeuralNetworkLayer.initNeurons(weights: W, biases: B)
     }

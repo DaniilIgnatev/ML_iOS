@@ -33,7 +33,7 @@ public struct Plot2D_UI: View {
         self.y_lim = y_lim
     }
     
-    public var background_color = Color.init(red: 42 / 255, green: 45 / 255, blue: 44 / 255)
+    public let background_color = Color.init(red: 42 / 255, green: 45 / 255, blue: 44 / 255)
     
     @State public var points: [Point]
     
@@ -193,7 +193,7 @@ public struct Plot2D_UI: View {
                     print(delta_discrete)
                     
                     if (delta_discrete - scale_cumulative).magnitude > 0{
-                        let speed: CGFloat = delta_discrete - scale_cumulative < 0 ? -1 : 1
+                        let speed: CGFloat = delta_discrete - scale_cumulative < 0 ? 1 : -1
                         scale_lim(speed: speed)
                         scale_cumulative = delta_discrete
                     }

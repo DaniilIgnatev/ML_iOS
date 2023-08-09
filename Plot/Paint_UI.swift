@@ -12,6 +12,8 @@ public struct Paint_UI: View {
         self._points = points
     }
     
+    public let background_color = Color.init(red: 42 / 255, green: 45 / 255, blue: 44 / 255)
+    
     @Binding public var points: [Point]
     
     let point_size: CGFloat = 4
@@ -20,12 +22,12 @@ public struct Paint_UI: View {
         GeometryReader { geometry in
             ForEach(points, id: \.self) { point in
                             Circle()
-                                .fill(Color.black)
+                                .fill(Color.green)
                                 .frame(width: self.point_size, height: self.point_size)
                                 .position(x: point.x, y: point.y)
                         }
         }
-        .background(Color.white)
+        .background(background_color)
         .gesture(
             DragGesture()
                 .onChanged { value in

@@ -6,25 +6,26 @@
 //
 
 import SwiftUI
+import ML
 
 @main
 struct ML_iOSApp: App {
-    @State private var selectedTab = 1
+    @State private var selectedTab = 0
     
     var body: some Scene {
         let firstTab_UI = Figures_Recogniser_UI()
         let secondTab_UI = Regression1_UI()
         
         WindowGroup {
-            TabView{
+            TabView(selection: $selectedTab){
                 firstTab_UI
                     .tabItem {
-                        Text("Neural network")
+                        Text("NEURAL NETWORK")
                     }
                 
                 secondTab_UI
                     .tabItem {
-                        Text("Linear regression")
+                        Text("LINEAR REGRESSION")
                     }
             }
             .frame(idealWidth: 600, idealHeight: 600)
