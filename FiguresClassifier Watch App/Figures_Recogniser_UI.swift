@@ -24,15 +24,19 @@ public struct Figures_Recogniser_UI: View {
     
     @State var classification_result = ""
     
-    let noise_classifier = NeuralNetwork(name: "Noise", hidden_layers_number: 2)
+    @State var classifiers_loaded = false
     
-    let line_classifier = NeuralNetwork(name: "Line", hidden_layers_number: 2)
+    @State var noise_classifier: NeuralNetwork? = nil
     
-    let triangle_classifier = NeuralNetwork(name: "Triangle", hidden_layers_number: 2)
+    @State var line_classifier: NeuralNetwork? = nil
     
-    let rectangle_classifier = NeuralNetwork(name: "Rectangle", hidden_layers_number: 2)
+    @State var triangle_classifier: NeuralNetwork? = nil
     
-    let ellipse_classifier = NeuralNetwork(name: "Ellipse", hidden_layers_number: 2)
+    @State var rectangle_classifier: NeuralNetwork? = nil
+    
+    @State var ellipse_classifier: NeuralNetwork? = nil
+    
+    @State var busy = false
     
     public var body: some View {
         let paint_ui = Paint_UI(points: self.$points_ui)
@@ -45,6 +49,7 @@ public struct Figures_Recogniser_UI: View {
                     Button("Check") {
                         self.classify()
                     }
+                    .disabled(!self.classifiers_loaded)
                     
                     Button("Clear") {
                         classification_result = ""
@@ -54,13 +59,48 @@ public struct Figures_Recogniser_UI: View {
             }
             
             VStack{
-                Text(self.classification_result)
-                    .foregroundColor(.red)
+                if self.busy {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle())
+                }
+                else{
+                    Text(self.classification_result)
+                        .foregroundColor(.red)
+                }
                 
                 Spacer()
             }
         }
         .background(background_color)
+        .onAppear(){
+            self.load_classifiers()
+        }
+    }
+    
+    private func load_classifiers(){
+        guard self.classifiers_loaded == false else{
+            return
+        }
+        
+        self.busy = true
+        
+        DispatchQueue.global(qos: .userInitiated).async {
+            let noise_classifier = NeuralNetwork(name: "Noise", hidden_layers_number: 2)
+            let line_classifier = NeuralNetwork(name: "Line", hidden_layers_number: 2)
+            let triangle_classifier = NeuralNetwork(name: "Triangle", hidden_layers_number: 2)
+            let rectangle_classifier = NeuralNetwork(name: "Rectangle", hidden_layers_number: 2)
+            let ellipse_classifier = NeuralNetwork(name: "Ellipse", hidden_layers_number: 2)
+            
+            DispatchQueue.main.async {
+                self.noise_classifier = noise_classifier
+                self.line_classifier = line_classifier
+                self.triangle_classifier = triangle_classifier
+                self.rectangle_classifier = rectangle_classifier
+                self.ellipse_classifier = ellipse_classifier
+                self.classifiers_loaded = true
+                self.busy = false
+            }
+        }
     }
     
     private func classify(){
@@ -70,45 +110,51 @@ public struct Figures_Recogniser_UI: View {
             return
         }
         
-        var interpolated_points = self.interpolate(points: self.points_ui)
-        interpolated_points = self.interpolate(points: interpolated_points)
+        self.busy = true
         
-        let normalized_points = self.normalize(points: interpolated_points)
-        
-        let sample = generate_sample(from: normalized_points)
-        
-        let noise_p = try! noise_classifier.forwardPropagation(input: sample).first ?? 0.0
-        let line_p = try! line_classifier.forwardPropagation(input: sample).first ?? 0.0
-        let triangle_p = try! triangle_classifier.forwardPropagation(input: sample).first ?? 0.0
-        let rectangle_p = try! rectangle_classifier.forwardPropagation(input: sample).first ?? 0.0
-        let ellipse_p = try! ellipse_classifier.forwardPropagation(input: sample).first ?? 0.0
-        
-        let P = [noise_p, line_p, triangle_p, rectangle_p, ellipse_p]
-        print("P=\(P)")
-        
-        let P_SM = Num.softmax(x: P)
-        print("P_softmax=\(P_SM)")
-        let names = ["Noise", "Line", "Triangle", "Rectangle", "Ellipse"]
-        
-        let indexOfLargest = P_SM.enumerated().max(by: { $0.element < $1.element })!.offset
-        let Name_largest = names[indexOfLargest]
-        
-        var P_SM_R = P_SM
-        P_SM_R.remove(at: indexOfLargest)
-        let indexOfSecondLargest = P_SM_R.enumerated().max(by: { $0.element < $1.element })!.offset
-        var names_r = names
-        names_r.remove(at: indexOfLargest)
-        let Name_second_largest = names_r[indexOfSecondLargest]
-        
-        if Num.truncateDouble(value: P_SM[indexOfLargest], toDecimalPlaces: 4) == Num.truncateDouble(value: P_SM_R[indexOfSecondLargest], toDecimalPlaces: 4){
-            self.classification_result = "\(Name_largest) or \(Name_second_largest)"
+        DispatchQueue.global(qos: .userInitiated).async {
+            var interpolated_points = self.interpolate(points: self.points_ui)
+            interpolated_points = self.interpolate(points: interpolated_points)
+            
+            let normalized_points = self.normalize(points: interpolated_points)
+            
+            let sample = generate_sample(from: normalized_points)
+            
+            let noise_p = try! noise_classifier!.forwardPropagation(input: sample).first ?? 0.0
+            let line_p = try! line_classifier!.forwardPropagation(input: sample).first ?? 0.0
+            let triangle_p = try! triangle_classifier!.forwardPropagation(input: sample).first ?? 0.0
+            let rectangle_p = try! rectangle_classifier!.forwardPropagation(input: sample).first ?? 0.0
+            let ellipse_p = try! ellipse_classifier!.forwardPropagation(input: sample).first ?? 0.0
+            
+            let P = [noise_p, line_p, triangle_p, rectangle_p, ellipse_p]
+            print("P=\(P)")
+            
+            let P_SM = Num.softmax(x: P)
+            print("P_softmax=\(P_SM)")
+            let names = ["Noise", "Line", "Triangle", "Rectangle", "Ellipse"]
+            
+            let indexOfLargest = P_SM.enumerated().max(by: { $0.element < $1.element })!.offset
+            let Name_largest = names[indexOfLargest]
+            
+            var P_SM_R = P_SM
+            P_SM_R.remove(at: indexOfLargest)
+            let indexOfSecondLargest = P_SM_R.enumerated().max(by: { $0.element < $1.element })!.offset
+            var names_r = names
+            names_r.remove(at: indexOfLargest)
+            let Name_second_largest = names_r[indexOfSecondLargest]
+            
+            var classification_result = "\(Name_largest)"
+            
+            if Num.truncateDouble(value: P_SM[indexOfLargest], toDecimalPlaces: 4) == Num.truncateDouble(value: P_SM_R[indexOfSecondLargest], toDecimalPlaces: 4){
+                self.classification_result = "\(Name_largest) or \(Name_second_largest)"
+            }
+            
+            DispatchQueue.main.async {
+                self.classification_result = classification_result
+                print(self.classification_result)
+                self.busy = false
+            }
         }
-        else{
-            self.classification_result = "\(Name_largest)"
-        }
-        
-        print(self.classification_result)
-        
         //        self.points_ui.append(contentsOf: normalized_points)
     }
     
